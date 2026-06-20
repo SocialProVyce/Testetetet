@@ -1,0 +1,1194 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+	<meta charset="UTF-8"><style data-styles="">slot-fb{display:contents}slot-fb[hidden]{display:none}presto-action-bar,presto-action-bar-controller,presto-action-bar-ui,presto-audio,presto-bunny,presto-business-skin,presto-cta-overlay,presto-cta-overlay-controller,presto-cta-overlay-ui,presto-dynamic-overlay-ui,presto-dynamic-overlays,presto-email-overlay,presto-email-overlay-controller,presto-email-overlay-ui,presto-modern-skin,presto-muted-overlay,presto-player,presto-player-button,presto-player-skeleton,presto-player-spinner,presto-playlist,presto-playlist-item,presto-playlist-overlay,presto-playlist-ui,presto-search-bar,presto-search-bar-ui,presto-stacked-skin,presto-timestamp,presto-video,presto-video-curtain-ui,presto-vimeo,presto-youtube,presto-youtube-subscribe-button{visibility:hidden}.hydrated{visibility:inherit}</style>
+		<title>LP – Agente IA – Social Pro</title>
+<meta name="robots" content="max-image-preview:large">
+<link rel="alternate" type="application/rss+xml" title="Feed para Social Pro »" href="//socialprocrew.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Feed de comentários para Social Pro »" href="//socialprocrew.com/comments/feed/">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="//socialprocrew.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fsocialprocrew.com%2Fvyce%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="//socialprocrew.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fsocialprocrew.com%2Fvyce%2F&amp;format=xml">
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<link data-minify="1" rel="stylesheet" id="html5-player-vimeo-style-css" href="//socialprocrew.com/wp-content/cache/min/1/wp-content/plugins/html5-video-player/build/blocks/view.css?ver=1781462462" media="all">
+<style id="presto-player-popup-trigger-style-inline-css">
+:where(.wp-block-presto-player-popup-trigger) {
+  /* reduce specificity */
+  display: grid;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+/* Play icon overlay for popup image trigger variation */
+:where(.presto-popup-image-trigger) {
+  position: relative;
+  cursor: pointer;
+}
+
+:where(.presto-popup-image-trigger)::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 48px;
+  background-image: url("/wp-content/plugins/presto-player/src/admin/blocks/blocks/popup-trigger/../../../../../img/play-button.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 10;
+  pointer-events: none;
+}
+
+:where(.presto-popup-image-trigger img) {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: brightness(0.5);
+}
+/*# sourceURL=https://socialprocrew.com/wp-content/plugins/presto-player/src/admin/blocks/blocks/popup-trigger/style.css */
+</style>
+<style id="presto-player-popup-media-style-inline-css">
+.wp-block-presto-player-popup.is-selected .wp-block-presto-player-popup-media {
+  display: initial;
+}
+
+.wp-block-presto-player-popup.has-child-selected .wp-block-presto-player-popup-media {
+  display: initial;
+}
+
+.presto-popup__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100000;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 0 5%;
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease;
+
+  --presto-popup-media-width: 1280px;
+  --presto-popup-background-color: rgba(0, 0, 0, 0.917);
+}
+
+.presto-popup--active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.presto-popup--active .presto-popup__content {
+  transform: scale(1);
+}
+
+.presto-popup__content {
+  position: relative;
+  z-index: 9999999999;
+  width: 100%;
+  max-width: var(--presto-popup-media-width);
+  transform: scale(0.9);
+  transition: transform 0.2s ease;
+}
+
+.presto-popup__close-button {
+  position: absolute;
+  top: calc(env(safe-area-inset-top) + 16px);
+  right: calc(env(safe-area-inset-right) + 16px);
+  padding: 0;
+  cursor: pointer;
+  z-index: 5000000;
+  min-width: 24px;
+  min-height: 24px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  box-shadow: none;
+  transition: opacity 0.2s ease;
+}
+
+.presto-popup__close-button:hover,
+.presto-popup__close-button:focus {
+  opacity: 0.8;
+  background: none;
+  border: none;
+}
+
+.presto-popup__close-button:not(:hover):not(:active):not(.has-background) {
+  background: none;
+  border: none;
+}
+
+.presto-popup__close-button svg {
+  width: 24px;
+  height: 24px;
+  fill: white;
+}
+
+.presto-popup__scrim {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2000000;
+  background-color: var(--presto-popup-background-color, rgb(255, 255, 255));
+}
+
+.presto-popup__speak {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+/*# sourceURL=https://socialprocrew.com/wp-content/plugins/presto-player/src/admin/blocks/blocks/popup-media/style.css */
+</style>
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:root { --wp--style--global--content-size: 800px;--wp--style--global--wide-size: 1200px; }:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.wp-site-blocks) > * { margin-block-start: 24px; margin-block-end: 0; }:where(.wp-site-blocks) > :first-child { margin-block-start: 0; }:where(.wp-site-blocks) > :last-child { margin-block-end: 0; }:root { --wp--style--block-gap: 24px; }:root :where(.is-layout-flow) > :first-child{margin-block-start: 0;}:root :where(.is-layout-flow) > :last-child{margin-block-end: 0;}:root :where(.is-layout-flow) > *{margin-block-start: 24px;margin-block-end: 0;}:root :where(.is-layout-constrained) > :first-child{margin-block-start: 0;}:root :where(.is-layout-constrained) > :last-child{margin-block-end: 0;}:root :where(.is-layout-constrained) > *{margin-block-start: 24px;margin-block-end: 0;}:root :where(.is-layout-flex){gap: 24px;}:root :where(.is-layout-grid){gap: 24px;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}a:where(:not(.wp-element-button)){text-decoration: underline;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+<link data-minify="1" rel="stylesheet" id="hello-elementor-css" href="//socialprocrew.com/wp-content/cache/min/1/wp-content/themes/hello-elementor/assets/css/reset.css?ver=1781462462" media="all">
+<link data-minify="1" rel="stylesheet" id="hello-elementor-theme-style-css" href="//socialprocrew.com/wp-content/cache/min/1/wp-content/themes/hello-elementor/assets/css/theme.css?ver=1781462462" media="all">
+<link data-minify="1" rel="stylesheet" id="hello-elementor-header-footer-css" href="//socialprocrew.com/wp-content/cache/min/1/wp-content/themes/hello-elementor/assets/css/header-footer.css?ver=1781462462" media="all">
+<link rel="stylesheet" id="elementor-frontend-css" href="//socialprocrew.com/wp-content/uploads/elementor/css/custom-frontend.min.css?ver=1781461496" media="all">
+<link rel="stylesheet" id="elementor-post-9-css" href="//socialprocrew.com/wp-content/uploads/elementor/css/post-9.css?ver=1781461496" media="all">
+<link data-minify="1" rel="stylesheet" id="font-awesome-5-all-css" href="//socialprocrew.com/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css?ver=1781462462" media="all">
+<link rel="stylesheet" id="font-awesome-4-shim-css" href="//socialprocrew.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css?ver=4.1.3" media="all">
+<link rel="stylesheet" id="e-animation-fadeInDown-css" href="//socialprocrew.com/wp-content/plugins/elementor/assets/lib/animations/styles/fadeInDown.min.css?ver=4.1.3" media="all">
+<link rel="stylesheet" id="widget-image-css" href="//socialprocrew.com/wp-content/plugins/elementor/assets/css/widget-image.min.css?ver=4.1.3" media="all">
+<link rel="stylesheet" id="e-animation-fadeInUp-css" href="//socialprocrew.com/wp-content/plugins/elementor/assets/lib/animations/styles/fadeInUp.min.css?ver=4.1.3" media="all">
+<link rel="stylesheet" id="widget-heading-css" href="//socialprocrew.com/wp-content/plugins/elementor/assets/css/widget-heading.min.css?ver=4.1.3" media="all">
+<link rel="stylesheet" id="widget-divider-css" href="//socialprocrew.com/wp-content/plugins/elementor/assets/css/widget-divider.min.css?ver=4.1.3" media="all">
+<link rel="stylesheet" id="e-motion-fx-css" href="//socialprocrew.com/wp-content/plugins/elementor-pro/assets/css/modules/motion-fx.min.css?ver=3.35.1" media="all">
+<link rel="stylesheet" id="widget-icon-list-css" href="//socialprocrew.com/wp-content/uploads/elementor/css/custom-widget-icon-list.min.css?ver=1781461496" media="all">
+<link rel="stylesheet" id="widget-video-css" href="//socialprocrew.com/wp-content/plugins/elementor/assets/css/widget-video.min.css?ver=4.1.3" media="all">
+<link rel="stylesheet" id="e-sticky-css" href="//socialprocrew.com/wp-content/plugins/elementor-pro/assets/css/modules/sticky.min.css?ver=3.35.1" media="all">
+<link data-minify="1" rel="stylesheet" id="swiper-css" href="//socialprocrew.com/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=1781462476" media="all">
+<link rel="stylesheet" id="e-swiper-css" href="//socialprocrew.com/wp-content/plugins/elementor/assets/css/conditionals/e-swiper.min.css?ver=4.1.3" media="all">
+<link rel="stylesheet" id="widget-image-carousel-css" href="//socialprocrew.com/wp-content/plugins/elementor/assets/css/widget-image-carousel.min.css?ver=4.1.3" media="all">
+<link rel="stylesheet" id="elementor-post-6985-css" href="//socialprocrew.com/wp-content/uploads/elementor/css/post-6985.css?ver=1781465285" media="all">
+<style id="rocket-lazyload-inline-css">
+.rll-youtube-player{position:relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;}.rll-youtube-player:focus-within{outline: 2px solid currentColor;outline-offset: 5px;}.rll-youtube-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:0 0}.rll-youtube-player img{bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top:0;border:none;height:auto;-webkit-transition:.4s all;-moz-transition:.4s all;transition:.4s all}.rll-youtube-player img:hover{-webkit-filter:brightness(75%)}.rll-youtube-player .play{height:100%;width:100%;left:0;top:0;position:absolute;background:url(https://socialprocrew.com/wp-content/plugins/wp-rocket/assets/img/youtube.png) no-repeat center;background-color: transparent !important;cursor:pointer;border:none;}.wp-embed-responsive .wp-has-aspect-ratio .rll-youtube-player{position:absolute;padding-bottom:0;width:100%;height:100%;top:0;bottom:0;left:0;right:0}
+/*# sourceURL=rocket-lazyload-inline-css */
+</style>
+<link data-minify="1" rel="stylesheet" id="elementor-gf-local-roboto-css" href="//socialprocrew.com/wp-content/cache/min/1/wp-content/uploads/elementor/google-fonts/css/roboto.css?ver=1781462463" media="all">
+<link data-minify="1" rel="stylesheet" id="elementor-gf-local-robotoslab-css" href="//socialprocrew.com/wp-content/cache/min/1/wp-content/uploads/elementor/google-fonts/css/robotoslab.css?ver=1781462463" media="all">
+<link data-minify="1" rel="stylesheet" id="elementor-gf-local-sora-css" href="//socialprocrew.com/wp-content/cache/min/1/wp-content/uploads/elementor/google-fonts/css/sora.css?ver=1781465145" media="all">
+<script src="//socialprocrew.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js" defer=""></script>
+<script src="//socialprocrew.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js" defer=""></script>
+<script src="//socialprocrew.com/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=4.1.3" id="font-awesome-4-shim-js" defer=""></script>
+<link rel="https://api.w.org/" href="//socialprocrew.com/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="//socialprocrew.com/wp-json/wp/v2/pages/6985"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="//socialprocrew.com/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.9.4">
+<link rel="canonical" href="//socialprocrew.com/vyce/">
+<link rel="shortlink" href="//socialprocrew.com/?p=6985">
+ <style> #h5vpQuickPlayer { width: 100%; max-width: 100%; margin: 0 auto; } </style> <meta name="generator" content="Elementor 4.1.3; features: e_font_icon_svg, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-auto">
+			<style>
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+					background-image: none !important;
+				}
+				@media screen and (max-height: 1024px) {
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+				@media screen and (max-height: 640px) {
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+			</style>
+			<link rel="icon" href="//socialprocrew.com/wp-content/uploads/2023/05/s-element-social-pro-BRANCO-1-1.png" sizes="32x32">
+<link rel="icon" href="//socialprocrew.com/wp-content/uploads/2023/05/s-element-social-pro-BRANCO-1-1.png" sizes="192x192">
+<link rel="apple-touch-icon" href="//socialprocrew.com/wp-content/uploads/2023/05/s-element-social-pro-BRANCO-1-1.png">
+<meta name="msapplication-TileImage" content="https://socialprocrew.com/wp-content/uploads/2023/05/s-element-social-pro-BRANCO-1-1.png">
+		<style id="wp-custom-css">
+			
+html, body{ overflow-x: hidden !important; }		</style>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><script type="module" src="https://socialprocrew.com/wp-content/plugins/presto-player/dist/components/web-components/web-components.esm.js?ver=1771896363"></script><script src="https://socialprocrew.com/wp-includes/js/wp-emoji-release.min.js?ver=6.9.4" defer=""></script></head>
+<body class="wp-singular page-template page-template-elementor_canvas page page-id-6985 wp-custom-logo wp-embed-responsive wp-theme-hello-elementor hello-elementor-default elementor-default elementor-template-canvas elementor-kit-9 elementor-page elementor-page-6985 e--ua-isTouchDevice e--ua-appleWebkit e--ua-safari e--ua-webkit" data-elementor-device-mode="mobile" style="">
+			<div data-elementor-type="wp-page" data-elementor-id="6985" class="elementor elementor-6985" data-elementor-post-type="page">
+				<div class="elementor-element elementor-element-4a2b52c blink-brightness e-flex e-con-boxed e-con e-parent e-lazyloaded" data-id="4a2b52c" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-de5ae44 e-flex e-con-boxed e-con e-child" data-id="de5ae44" data-element_type="container" data-e-type="container" data-settings="{&quot;position&quot;:&quot;absolute&quot;}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-a42ee01 elementor-widget__width-initial elementor-widget elementor-widget-image animated fadeInDown" data-id="a42ee01" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;}" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img fetchpriority="high" decoding="async" width="612" height="143" src="//socialprocrew.com/wp-content/webp-express/webp-images/uploads/2025/07/FOTO-DELE.png.webp" class="attachment-full size-full wp-image-7127 entered lazyloaded" alt="" data-lazy-srcset="//socialprocrew.com/wp-content/uploads/2025/07/FOTO-DELE.png 612w,   //socialprocrew.com/wp-content/uploads/2025/07/FOTO-DELE-300x70.png 300w" data-lazy-sizes="(max-width: 612px) 100vw, 612px" data-lazy-src="//socialprocrew.com/wp-content/webp-express/webp-images/uploads/2025/07/FOTO-DELE.png.webp" data-ll-status="loaded" sizes="(max-width: 612px) 100vw, 612px" srcset="//socialprocrew.com/wp-content/uploads/2025/07/FOTO-DELE.png 612w,   //socialprocrew.com/wp-content/uploads/2025/07/FOTO-DELE-300x70.png 300w">															</div>
+				</div>
+				<div class="elementor-element elementor-element-cdee0c1 elementor-widget elementor-widget-button animated fadeInDown" data-id="cdee0c1" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;,&quot;_animation_delay&quot;:200}" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-sm" href="#preco">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-icon">
+				<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.783045 12.0021C0.506889 11.7361 0.506889 11.3049 0.783045 11.0391L10.1826 1.98758H4.11149C3.72097 1.98758 3.40438 1.68272 3.40438 1.30666C3.40438 0.930595 3.72097 0.625732 4.11149 0.625732H11.8897C12.0773 0.625732 12.2571 0.697475 12.3898 0.825175C12.5223 0.952875 12.5968 1.12606 12.5968 1.30666V8.79682C12.5968 9.17288 12.2802 9.47775 11.8897 9.47775C11.4993 9.47775 11.1826 9.17288 11.1826 8.79682V2.95055L1.78304 12.0021C1.5069 12.2679 1.05919 12.2679 0.783045 12.0021Z" fill="black"></path></svg>			</span>
+									<span class="elementor-button-text">ADQUIRIR ACESSO</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-96fc14b e-con-full e-flex e-con e-child" data-id="96fc14b" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-bd6f886 elementor-widget__width-initial elementor-widget elementor-widget-image animated fadeInUp" data-id="bd6f886" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="557" height="59" src="//socialprocrew.com/wp-content/webp-express/webp-images/uploads/2025/07/Frame-9.png.webp" class="attachment-full size-full wp-image-7125 entered lazyloaded" alt="" data-lazy-srcset="//socialprocrew.com/wp-content/uploads/2025/07/Frame-9.png 557w,   //socialprocrew.com/wp-content/uploads/2025/07/Frame-9-300x32.png 300w" data-lazy-sizes="(max-width: 557px) 100vw, 557px" data-lazy-src="//socialprocrew.com/wp-content/webp-express/webp-images/uploads/2025/07/Frame-9.png.webp" data-ll-status="loaded" sizes="(max-width: 557px) 100vw, 557px" srcset="//socialprocrew.com/wp-content/uploads/2025/07/Frame-9.png 557w,   //socialprocrew.com/wp-content/uploads/2025/07/Frame-9-300x32.png 300w">															</div>
+				</div>
+				<div class="elementor-element elementor-element-de4c106 elementor-widget__width-initial elementor-widget elementor-widget-heading animated fadeInUp" data-id="de4c106" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:200}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default"><span class="deg">Seu Guia Pessoal Para Vida Social,</span> Sedução e Masculinidade. 24H Por Dia. Na Sua Mão.</p>				</div>
+				</div>
+				<div class="elementor-element elementor-element-0d4351a elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="0d4351a" data-element_type="widget" data-e-type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+						</div>
+				</div>
+		<div class="elementor-element elementor-element-2b91e44 e-con-full e-flex e-con e-child animated fadeInUp" data-id="2b91e44" data-element_type="container" data-e-type="container" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}">
+				<div class="elementor-element elementor-element-fc90a63 elementor-widget elementor-widget-heading" data-id="fc90a63" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default"><a href="#oquee">O QUE É?</a></p>				</div>
+				</div>
+				<div class="elementor-element elementor-element-5271ea7 txt elementor-widget elementor-widget-heading" data-id="5271ea7" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default"><a href="#fun">COMO FUNCIONA?</a></p>				</div>
+				</div>
+				<div class="elementor-element elementor-element-8ff4787 txt elementor-widget elementor-widget-heading" data-id="8ff4787" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default"><a href="#oq">como usar?</a></p>				</div>
+				</div>
+				<div class="elementor-element elementor-element-ea1786d txt elementor-widget elementor-widget-heading" data-id="ea1786d" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default"><a href="#ep">vyce é pra mim?</a></p>				</div>
+				</div>
+				<div class="elementor-element elementor-element-c0b79d0 txt elementor-widget elementor-widget-heading" data-id="c0b79d0" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default"><a href="#bon">bônus</a></p>				</div>
+				</div>
+				<div class="elementor-element elementor-element-a456c41 txt elementor-widget elementor-widget-heading" data-id="a456c41" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default"><a href="#fim">acessar agora!</a></p>				</div>
+				</div>
+				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-68ffb4d e-flex e-con-boxed e-con e-parent e-lazyloaded" data-id="68ffb4d" data-element_type="container" data-e-type="container">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-fbc6c30 elementor-widget__width-inherit elementor-widget elementor-widget-heading elementor-motion-effects-parent" data-id="fbc6c30" data-element_type="widget" data-e-type="widget" data-settings="{&quot;motion_fx_motion_fx_scrolling&quot;:&quot;yes&quot;,&quot;motion_fx_translateX_effect&quot;:&quot;yes&quot;,&quot;motion_fx_translateX_direction&quot;:&quot;negative&quot;,&quot;motion_fx_translateX_speed&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:4,&quot;sizes&quot;:[]},&quot;motion_fx_translateX_affectedRange&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:{&quot;start&quot;:0,&quot;end&quot;:100}},&quot;motion_fx_devices&quot;:[&quot;desktop&quot;,&quot;laptop&quot;,&quot;tablet&quot;,&quot;mobile_extra&quot;,&quot;mobile&quot;]}" data-widget_type="heading.default">
+				<div class="elementor-widget-container elementor-motion-effects-element" style="--translateX: 200px; --e-transform-transition-duration: 100ms; transform: translateX(var(--translateX));">
+					<p class="elementor-heading-title elementor-size-default">guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    </p>				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-abafa15 e-flex e-con-boxed e-con e-parent e-lazyloaded" data-id="abafa15" data-element_type="container" data-e-type="container" id="oquee">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-c459b6f e-con-full e-flex e-con e-child" data-id="c459b6f" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-d38910f elementor-widget__width-initial elementor-absolute e-transform elementor-widget elementor-widget-html" data-id="d38910f" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;_transform_scale_effect&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1.4,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_laptop&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_mobile_extra&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+					<div class="black-hole">
+  <div class="stars"><div class="star" style="left: 315.302961px; top: 159.71435px; --dx: -165.3029612229991px; --dy: -9.714350328259968px;"></div><div class="star" style="left: 332.128288px; top: 249.513782px; --dx: -182.12828798658938px; --dy: -99.51378183468677px;"></div><div class="star" style="left: 143.357782px; top: -46.877644px; --dx: 6.642218366353177px; --dy: 196.87764364282026px;"></div><div class="star" style="left: -13.648903px; top: 29.46219px; --dx: 163.64890265722624px; --dy: 120.53781010241464px;"></div><div class="star" style="left: 244.907585px; top: 351.614347px; --dx: -94.90758520104745px; --dy: -201.61434692263515px;"></div><div class="star" style="left: 153.756866px; top: -43.217132px; --dx: -3.756865652592751px; --dy: 193.21713234943627px;"></div><div class="star" style="left: 40.41333px; top: 15.400479px; --dx: 109.58666958543807px; --dy: 134.59952099857094px;"></div><div class="star" style="left: 349.048744px; top: 213.374896px; --dx: -199.04874362625026px; --dy: -63.374896141270995px;"></div><div class="star" style="left: 179.651704px; top: 350.191688px; --dx: -29.651703866997252px; --dy: -200.19168846058585px;"></div><div class="star" style="left: 74.080856px; top: -64.579024px; --dx: 75.91914377690395px; --dy: 214.57902351403644px;"></div><div class="star" style="left: 314.938512px; top: 277.460923px; --dx: -164.93851204516181px; --dy: -127.46092338715982px;"></div><div class="star" style="left: 196.650129px; top: -59.818974px; --dx: -46.650128748916245px; --dy: 209.81897363511322px;"></div><div class="star" style="left: 120.300046px; top: -67.634797px; --dx: 29.699953884140058px; --dy: 217.63479652747927px;"></div><div class="star" style="left: 36.595628px; top: 2.346963px; --dx: 113.40437240272496px; --dy: 147.65303707991976px;"></div><div class="star" style="left: -25.747623px; top: 164.115499px; --dx: 175.7476233471353px; --dy: -14.11549938564957px;"></div><div class="star" style="left: 246.789683px; top: 265.885842px; --dx: -96.78968256237806px; --dy: -115.88584185020068px;"></div><div class="star" style="left: 316.046827px; top: 140.082169px; --dx: -166.04682675834528px; --dy: 9.91783062281425px;"></div><div class="star" style="left: -28.81617px; top: 296.612524px; --dx: 178.8161702087901px; --dy: -146.61252412905492px;"></div><div class="star" style="left: 286.34px; top: 24.477849px; --dx: -136.33999998361742px; --dy: 125.52215064458981px;"></div><div class="star" style="left: 321.344977px; top: 222.768966px; --dx: -171.3449773577554px; --dy: -72.76896561451866px;"></div><div class="star" style="left: -61.306173px; top: 216.655802px; --dx: 211.30617264515558px; --dy: -66.65580179092424px;"></div><div class="star" style="left: 105.684145px; top: 313.245422px; --dx: 44.3158548033812px; --dy: -163.24542216629288px;"></div><div class="star" style="left: 379.263142px; top: 203.222707px; --dx: -229.26314202577726px; --dy: -53.222707117656114px;"></div><div class="star" style="left: -77.40808px; top: 140.062474px; --dx: 227.40807979626692px; --dy: 9.937526248177619px;"></div><div class="star" style="left: 183.545686px; top: -94.329528px; --dx: -33.545685928778255px; --dy: 244.32952845307318px;"></div><div class="star" style="left: 346.790948px; top: 91.741841px; --dx: -196.7909475734957px; --dy: 58.258159255931346px;"></div><div class="star" style="left: 21.354286px; top: -12.39043px; --dx: 128.64571402060247px; --dy: 162.39043017604985px;"></div><div class="star" style="left: -40.114572px; top: 105.847479px; --dx: 190.11457199743018px; --dy: 44.15252054570573px;"></div><div class="star" style="left: 266.587201px; top: 284.152727px; --dx: -116.587200608449px; --dy: -134.1527267126139px;"></div><div class="star" style="left: 280.788674px; top: 44.779782px; --dx: -130.78867392074005px; --dy: 105.22021791515834px;"></div><div class="star" style="left: 162.092352px; top: 391.667708px; --dx: -12.092352075752359px; --dy: -241.66770799358756px;"></div><div class="star" style="left: 370.743731px; top: 75.936291px; --dx: -220.74373081715777px; --dy: 74.06370931108972px;"></div><div class="star" style="left: -28.531397px; top: -9.379732px; --dx: 178.53139744811924px; --dy: 159.37973225835114px;"></div><div class="star" style="left: 14.876887px; top: 276.081764px; --dx: 135.1231127525177px; --dy: -126.08176432281067px;"></div><div class="star" style="left: -38.739016px; top: 261.416505px; --dx: 188.7390163521301px; --dy: -111.41650458877507px;"></div><div class="star" style="left: -6.883673px; top: 205.772925px; --dx: 156.88367333899785px; --dy: -55.77292533532153px;"></div><div class="star" style="left: 29.223587px; top: 269.824696px; --dx: 120.77641314340565px; --dy: -119.82469559073087px;"></div><div class="star" style="left: 192.969252px; top: -16.483016px; --dx: -42.9692518941969px; --dy: 166.48301641424135px;"></div><div class="star" style="left: 187.854512px; top: -49.396705px; --dx: -37.854512410864544px; --dy: 199.39670526978367px;"></div><div class="star" style="left: 387.821228px; top: 162.347935px; --dx: -237.82122817261666px; --dy: -12.347934885021346px;"></div><div class="star" style="left: 356.191216px; top: 49.08446px; --dx: -206.19121584921874px; --dy: 100.91554002120559px;"></div><div class="star" style="left: 391.372181px; top: 175.710862px; --dx: -241.37218130328392px; --dy: -25.710861756967603px;"></div><div class="star" style="left: 142.586705px; top: 344.709839px; --dx: 7.413295291271481px; --dy: -194.70983914854014px;"></div><div class="star" style="left: 48.010731px; top: -14.556063px; --dx: 101.98926850810217px; --dy: 164.55606281921615px;"></div><div class="star" style="left: 255.754985px; top: 319.204764px; --dx: -105.7549848988557px; --dy: -169.20476364147328px;"></div><div class="star" style="left: 273.303935px; top: 28.382471px; --dx: -123.30393510172001px; --dy: 121.61752858788407px;"></div><div class="star" style="left: 115.764633px; top: -13.69361px; --dx: 34.235366962904976px; --dy: 163.69361016509222px;"></div><div class="star" style="left: 42.878311px; top: 26.654855px; --dx: 107.12168917910068px; --dy: 123.34514532684804px;"></div><div class="star" style="left: 53.469451px; top: 329.382495px; --dx: 96.53054891650373px; --dy: -179.3824953630434px;"></div><div class="star" style="left: 277.773596px; top: -56.564809px; --dx: -127.77359602725329px; --dy: 206.5648090365786px;"></div><div class="star" style="left: 363.156975px; top: 174.433153px; --dx: -213.1569754880158px; --dy: -24.43315293632827px;"></div><div class="star" style="left: 268.334759px; top: 343.497239px; --dx: -118.33475944969888px; --dy: -193.49723878687882px;"></div><div class="star" style="left: 300.919874px; top: 150.747761px; --dx: -150.9198739715987px; --dy: -0.7477614230152483px;"></div><div class="star" style="left: 269.513856px; top: 42.507622px; --dx: -119.51385617611965px; --dy: 107.49237776937264px;"></div><div class="star" style="left: 147.366854px; top: 324.120872px; --dx: 2.6331462707825892px; --dy: -174.12087208067027px;"></div><div class="star" style="left: 320.837001px; top: 198.74847px; --dx: -170.83700101760633px; --dy: -48.7484697741796px;"></div><div class="star" style="left: -6.11307px; top: 288.125372px; --dx: 156.11307002066394px; --dy: -138.12537187021655px;"></div><div class="star" style="left: -78.772472px; top: 198.317795px; --dx: 228.77247162099601px; --dy: -48.31779477536196px;"></div><div class="star" style="left: 214.296942px; top: 293.572613px; --dx: -64.2969420292385px; --dy: -143.57261313324454px;"></div><div class="star" style="left: -2.208628px; top: 325.118813px; --dx: 152.20862799428795px; --dy: -175.1188132463193px;"></div><div class="star" style="left: 40.375465px; top: 303.291313px; --dx: 109.624534568811px; --dy: -153.29131266896366px;"></div><div class="star" style="left: 56.823422px; top: 356.848237px; --dx: 93.17657802700967px; --dy: -206.84823668511757px;"></div><div class="star" style="left: 16.990322px; top: 74.919886px; --dx: 133.00967803116805px; --dy: 75.0801139410872px;"></div><div class="star" style="left: 43.579207px; top: 366.432876px; --dx: 106.42079273936902px; --dy: -216.43287586181987px;"></div><div class="star" style="left: 349.22103px; top: 230.162355px; --dx: -199.2210303105586px; --dy: -80.16235484941095px;"></div><div class="star" style="left: 343.29658px; top: 135.271348px; --dx: -193.29658041564971px; --dy: 14.728652395578479px;"></div><div class="star" style="left: 207.109992px; top: 388.168607px; --dx: -57.109992168830786px; --dy: -238.16860746935942px;"></div><div class="star" style="left: -32.733307px; top: 201.790232px; --dx: 182.73330727138816px; --dy: -51.79023223255635px;"></div><div class="star" style="left: 144.269773px; top: 377.420976px; --dx: 5.730226600570319px; --dy: -227.42097598536884px;"></div><div class="star" style="left: 367.625992px; top: 207.010551px; --dx: -217.6259920659242px; --dy: -57.01055090671656px;"></div><div class="star" style="left: 215.896438px; top: 13.782297px; --dx: -65.89643756150429px; --dy: 136.21770283297957px;"></div><div class="star" style="left: 212.692717px; top: -89.185727px; --dx: -62.69271677322371px; --dy: 239.18572655205898px;"></div><div class="star" style="left: 190.207263px; top: 303.140043px; --dx: -40.20726314551678px; --dy: -153.14004330599454px;"></div><div class="star" style="left: -14.393877px; top: 198.732395px; --dx: 164.39387664979992px; --dy: -48.732395192606276px;"></div><div class="star" style="left: 25.35949px; top: -1.560651px; --dx: 124.64051007911827px; --dy: 151.56065052624263px;"></div><div class="star" style="left: 82.411328px; top: -43.091929px; --dx: 67.58867226296722px; --dy: 193.09192901525995px;"></div><div class="star" style="left: 349.884194px; top: 173.811106px; --dx: -199.88419380669188px; --dy: -23.811106495285685px;"></div><div class="star" style="left: 65.027221px; top: 338.654548px; --dx: 84.97277879246954px; --dy: -188.65454819575461px;"></div><div class="star" style="left: 71.39411px; top: 316.614361px; --dx: 78.60588973390718px; --dy: -166.6143612128575px;"></div><div class="star" style="left: -76.254492px; top: 131.747306px; --dx: 226.25449185556286px; --dy: 18.25269403993198px;"></div><div class="star" style="left: 4.456895px; top: 29.117334px; --dx: 145.54310487385814px; --dy: 120.88266584364472px;"></div><div class="star" style="left: 22.522982px; top: 52.307797px; --dx: 127.47701831948115px; --dy: 97.69220308118204px;"></div><div class="star" style="left: -71.346925px; top: 128.028682px; --dx: 221.34692492355296px; --dy: 21.971318304770733px;"></div><div class="star" style="left: 333.632993px; top: 127.480328px; --dx: -183.63299344675784px; --dy: 22.519672190630473px;"></div><div class="star" style="left: 243.313597px; top: 348.857892px; --dx: -93.31359687482774px; --dy: -198.85789204771493px;"></div><div class="star" style="left: 2.323757px; top: 237.290035px; --dx: 147.6762429786121px; --dy: -87.29003529942102px;"></div><div class="star" style="left: -5.697386px; top: 66.772514px; --dx: 155.69738593156387px; --dy: 83.22748555112632px;"></div><div class="star" style="left: 71.065418px; top: -45.959639px; --dx: 78.93458241128165px; --dy: 195.9596386815756px;"></div><div class="star" style="left: 227.852332px; top: -61.311982px; --dx: -77.85233194989087px; --dy: 211.3119821999281px;"></div><div class="star" style="left: -73.72278px; top: 139.47189px; --dx: 223.7227799237897px; --dy: 10.528109756725968px;"></div><div class="star" style="left: 72.566507px; top: 386.401125px; --dx: 77.43349279390583px; --dy: -236.40112499547126px;"></div><div class="star" style="left: 272.362914px; top: -38.271539px; --dx: -122.3629141669108px; --dy: 188.27153875290892px;"></div><div class="star" style="left: 185.904551px; top: 384.829166px; --dx: -35.904551176382px; --dy: -234.82916581439122px;"></div><div class="star" style="left: 60.566283px; top: 346.218933px; --dx: 89.43371695478163px; --dy: -196.21893301933153px;"></div><div class="star" style="left: 353.285692px; top: 144.3469px; --dx: -203.28569211408796px; --dy: 5.6530999756982965px;"></div><div class="star" style="left: 328.106892px; top: 203.365206px; --dx: -178.10689248251236px; --dy: -53.36520626069745px;"></div><div class="star" style="left: -1.520429px; top: -9.48886px; --dx: 151.52042859269656px; --dy: 159.48885970436913px;"></div><div class="star" style="left: 314.492555px; top: 285.038511px; --dx: -164.49255496119844px; --dy: -135.03851112762402px;"></div><div class="star" style="left: 305.721791px; top: 259.181817px; --dx: -155.72179108287457px; --dy: -109.1818170098851px;"></div><div class="star" style="left: 236.031836px; top: 5.820512px; --dx: -86.03183644170781px; --dy: 144.1794877732303px;"></div><div class="star" style="left: 169.655164px; top: 320.301243px; --dx: -19.655163548015594px; --dy: -170.30124284553744px;"></div><div class="star" style="left: 38.418957px; top: 273.222944px; --dx: 111.58104295967216px; --dy: -123.2229442425081px;"></div><div class="star" style="left: 298.086928px; top: 255.552377px; --dx: -148.08692777450244px; --dy: -105.55237739161953px;"></div><div class="star" style="left: -17.188632px; top: 303.783355px; --dx: 167.18863151965112px; --dy: -153.78335464980375px;"></div><div class="star" style="left: 66.519219px; top: 14.55934px; --dx: 83.48078096089272px; --dy: 135.440660278884px;"></div><div class="star" style="left: 209.099492px; top: -24.321603px; --dx: -59.09949230567173px; --dy: 174.32160331999012px;"></div><div class="star" style="left: 228.901936px; top: 7.57609px; --dx: -78.90193609678761px; --dy: 142.4239095913212px;"></div><div class="star" style="left: -1.001252px; top: 348.291176px; --dx: 151.0012516641214px; --dy: -198.2911761155707px;"></div><div class="star" style="left: 350.531483px; top: 7.745314px; --dx: -200.53148260250236px; --dy: 142.25468569540578px;"></div><div class="star" style="left: 371.537002px; top: 108.398988px; --dx: -221.5370020555872px; --dy: 41.60101203690036px;"></div><div class="star" style="left: 373.0841px; top: 94.863628px; --dx: -223.08410027433166px; --dy: 55.13637241717751px;"></div><div class="star" style="left: 169.374356px; top: 347.707778px; --dx: -19.374356368244037px; --dy: -197.7077784302483px;"></div><div class="star" style="left: 204.905774px; top: -54.414192px; --dx: -54.90577378229875px; --dy: 204.4141923414455px;"></div><div class="star" style="left: 166.645922px; top: -9.670342px; --dx: -16.645922112818937px; --dy: 159.67034178565797px;"></div><div class="star" style="left: -34.608756px; top: 153.693433px; --dx: 184.6087558805239px; --dy: -3.6934325934846015px;"></div><div class="star" style="left: 355.707256px; top: 127.396591px; --dx: -205.70725572055818px; --dy: 22.603409441700194px;"></div><div class="star" style="left: 63.563594px; top: 307.312503px; --dx: 86.4364059716453px; --dy: -157.3125032937981px;"></div><div class="star" style="left: 361.178677px; top: 211.402385px; --dx: -211.178677160878px; --dy: -61.40238503398808px;"></div><div class="star" style="left: 87.40625px; top: 296.186321px; --dx: 62.5937495832504px; --dy: -146.1863213822494px;"></div><div class="star" style="left: 51.245053px; top: 304.806884px; --dx: 98.75494730569339px; --dy: -154.80688412969494px;"></div><div class="star" style="left: -76.939127px; top: 75.121693px; --dx: 226.93912715397136px; --dy: 74.87830694069659px;"></div><div class="star" style="left: -52.868547px; top: 161.679637px; --dx: 202.86854706212642px; --dy: -11.679636920379721px;"></div><div class="star" style="left: -55.511706px; top: 130.781627px; --dx: 205.5117059785585px; --dy: 19.21837295163442px;"></div><div class="star" style="left: 150.342025px; top: -58.256847px; --dx: -0.3420251230082272px; --dy: 208.25684726516891px;"></div><div class="star" style="left: 340.816957px; top: 24.971782px; --dx: -190.81695713346664px; --dy: 125.02821771234578px;"></div><div class="star" style="left: 43.963158px; top: 276.570705px; --dx: 106.03684150287833px; --dy: -126.5707049058962px;"></div><div class="star" style="left: 12.583672px; top: 49.920424px; --dx: 137.41632767977845px; --dy: 100.07957563017646px;"></div><div class="star" style="left: 92.042823px; top: 341.279305px; --dx: 57.95717688408941px; --dy: -191.27930475975393px;"></div><div class="star" style="left: -67.542202px; top: 31.259756px; --dx: 217.54220172958307px; --dy: 118.74024353105379px;"></div><div class="star" style="left: 306.04222px; top: 109.213903px; --dx: -156.04222044841185px; --dy: 40.78609701316299px;"></div><div class="star" style="left: 308.897108px; top: -20.140472px; --dx: -158.8971080768041px; --dy: 170.14047191129814px;"></div><div class="star" style="left: 288.636364px; top: 352.930848px; --dx: -138.6363644325774px; --dy: -202.93084819240607px;"></div><div class="star" style="left: 310.62049px; top: 25.941059px; --dx: -160.62048967441px; --dy: 124.05894093009748px;"></div><div class="star" style="left: 321.797152px; top: 168.695453px; --dx: -171.7971520210338px; --dy: -18.69545335391615px;"></div><div class="star" style="left: 226.599253px; top: 16.028674px; --dx: -76.59925251415422px; --dy: 133.9713259761995px;"></div><div class="star" style="left: 178.029471px; top: 390.073517px; --dx: -28.02947080120154px; --dy: -240.0735165968083px;"></div><div class="star" style="left: 81.3923px; top: 331.720966px; --dx: 68.60770025492477px; --dy: -181.72096645471652px;"></div><div class="star" style="left: 201.452295px; top: 309.160493px; --dx: -51.452295001265156px; --dy: -159.1604926017041px;"></div><div class="star" style="left: 293.201179px; top: 317.323048px; --dx: -143.20117932843885px; --dy: -167.32304813687506px;"></div><div class="star" style="left: 148.439909px; top: -35.804689px; --dx: 1.5600913398033356px; --dy: 185.80468902685445px;"></div><div class="star" style="left: -45.588652px; top: 58.420349px; --dx: 195.58865173555196px; --dy: 91.57965118323024px;"></div><div class="star" style="left: 291.729063px; top: 76.640225px; --dx: -141.72906281730815px; --dy: 73.35977466670796px;"></div><div class="star" style="left: 227.12921px; top: 293.217222px; --dx: -77.12921027809293px; --dy: -143.21722195702637px;"></div><div class="star" style="left: 390.050459px; top: 161.769263px; --dx: -240.05045880355874px; --dy: -11.769263199227225px;"></div><div class="star" style="left: 217.318551px; top: 337.321049px; --dx: -67.31855055999657px; --dy: -187.32104947284478px;"></div><div class="star" style="left: 338.495996px; top: 31.379784px; --dx: -188.49599614070803px; --dy: 118.62021562148415px;"></div><div class="star" style="left: -43.129654px; top: 157.327564px; --dx: 193.1296543564712px; --dy: -7.327563767947055px;"></div><div class="star" style="left: 91.759464px; top: -77.716094px; --dx: 58.24053606833141px; --dy: 227.71609367703343px;"></div><div class="star" style="left: -53.968564px; top: 185.500099px; --dx: 203.96856441036158px; --dy: -35.500099364943026px;"></div><div class="star" style="left: 379.974591px; top: 58.310512px; --dx: -229.97459059038897px; --dy: 91.68948819294495px;"></div><div class="star" style="left: 26.621203px; top: 39.817246px; --dx: 123.37879675446258px; --dy: 110.18275426495387px;"></div><div class="star" style="left: 159.655793px; top: 342.891279px; --dx: -9.655792715352334px; --dy: -192.89127881409013px;"></div><div class="star" style="left: 71.036013px; top: 340.761797px; --dx: 78.9639872676551px; --dy: -190.76179685643535px;"></div><div class="star" style="left: 300.249434px; top: -25.955483px; --dx: -150.2494338366693px; --dy: 175.95548284524014px;"></div><div class="star" style="left: 34.929147px; top: 354.316912px; --dx: 115.07085263405078px; --dy: -204.31691224989208px;"></div><div class="star" style="left: -12.819407px; top: 10.324991px; --dx: 162.81940667257086px; --dy: 139.67500883995234px;"></div><div class="star" style="left: 300.643473px; top: 26.496812px; --dx: -150.64347302296608px; --dy: 123.50318771287455px;"></div><div class="star" style="left: 137.63067px; top: -88.794452px; --dx: 12.36932952758761px; --dy: 238.7944521861132px;"></div><div class="star" style="left: 211.086796px; top: 8.72579px; --dx: -61.08679559832831px; --dy: 141.27421035471374px;"></div><div class="star" style="left: -27.791343px; top: 213.089229px; --dx: 177.79134279941906px; --dy: -63.08922871714833px;"></div></div>
+</div>
+
+<style>
+  .black-hole {
+    position: relative;
+    top: 0%;
+    left: 50%;
+    width: 600px;
+    height: 600px;
+    transform: translate(-50%, 0%);
+    border-radius: 50%;
+    mask: radial-gradient(black 60%, transparent 70%);
+    -webkit-mask: radial-gradient(black 60%, transparent 70%);
+    pointer-events: none;
+  }
+
+  @media(max-width: 1024px) {
+    .black-hole {
+      width: 300px;
+      height: 300px;
+    }
+  }
+
+  .stars {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    animation: spin 70s linear infinite;
+  }
+
+  .star {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0;
+    animation: fall-in 8s linear forwards;
+  }
+
+  @keyframes spin {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  @keyframes fall-in {
+    0% {
+      opacity: 1;
+      transform: translate(0, 0) scale(1) rotate(0deg);
+    }
+    100% {
+      transform: translate(var(--dx), var(--dy)) scale(0.1) rotate(720deg);
+      opacity: 0;
+    }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.black-hole .stars').forEach(starsContainer => {
+    const container = starsContainer.parentElement;
+    function getCenter() {
+      return container.offsetWidth / 2;
+    }
+
+    function createStar() {
+      const center = getCenter();
+      const star = document.createElement('div');
+      star.className = 'star';
+
+      const angle = Math.random() * 2 * Math.PI;
+      const distance = center + Math.random() * 100;
+
+      const x = center + distance * Math.cos(angle);
+      const y = center + distance * Math.sin(angle);
+
+      star.style.left = `${x}px`;
+      star.style.top = `${y}px`;
+
+      const dx = `${center - x}px`;
+      const dy = `${center - y}px`;
+
+      star.style.setProperty('--dx', dx);
+      star.style.setProperty('--dy', dy);
+
+      starsContainer.appendChild(star);
+      setTimeout(() => star.remove(), 8000);
+    }
+
+    setInterval(() => {
+      for (let i = 0; i < 4; i++) {
+        createStar();
+      }
+    }, 200);
+  });
+</script>				</div>
+				</div>
+				<div class="elementor-element elementor-element-aa1d8c0 blur elementor-widget elementor-widget-image elementor-motion-effects-parent ativo" data-id="aa1d8c0" data-element_type="widget" data-e-type="widget" data-settings="{&quot;motion_fx_motion_fx_scrolling&quot;:&quot;yes&quot;,&quot;motion_fx_rotateZ_effect&quot;:&quot;yes&quot;,&quot;motion_fx_rotateZ_speed&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0.2,&quot;sizes&quot;:[]},&quot;motion_fx_scale_effect&quot;:&quot;yes&quot;,&quot;motion_fx_scale_speed&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;motion_fx_rotateZ_affectedRange&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:{&quot;start&quot;:0,&quot;end&quot;:100}},&quot;motion_fx_scale_direction&quot;:&quot;out-in&quot;,&quot;motion_fx_scale_range&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:{&quot;start&quot;:20,&quot;end&quot;:80}},&quot;motion_fx_devices&quot;:[&quot;desktop&quot;,&quot;laptop&quot;,&quot;tablet&quot;,&quot;mobile_extra&quot;,&quot;mobile&quot;]}" data-widget_type="image.default">
+				<div class="elementor-widget-container elementor-motion-effects-element" style="--rotateZ: -10deg; --scale: 1.1; --e-transform-transition-duration: 100ms; transform: rotateZ(var(--rotateZ))scale(var(--scale));">
+															<img decoding="async" width="731" height="786" src="//socialprocrew.com/wp-content/webp-express/webp-images/uploads/2025/07/Group-191.png.webp" class="attachment-full size-full wp-image-7001 entered lazyloaded" alt="" data-lazy-srcset="//socialprocrew.com/wp-content/uploads/2025/07/Group-191.png 731w,   //socialprocrew.com/wp-content/uploads/2025/07/Group-191-279x300.png 279w" data-lazy-sizes="(max-width: 731px) 100vw, 731px" data-lazy-src="//socialprocrew.com/wp-content/webp-express/webp-images/uploads/2025/07/Group-191.png.webp" data-ll-status="loaded" sizes="(max-width: 731px) 100vw, 731px" srcset="//socialprocrew.com/wp-content/uploads/2025/07/Group-191.png 731w,   //socialprocrew.com/wp-content/uploads/2025/07/Group-191-279x300.png 279w">															</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-5ec41c6 e-con-full e-flex e-con e-child" data-id="5ec41c6" data-element_type="container" data-e-type="container">
+		<div class="elementor-element elementor-element-ddb1abc e-con-full scroll-bottom e-flex e-con e-child ativo" data-id="ddb1abc" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-8f86d6f elementor-widget__width-initial elementor-widget elementor-widget-image" data-id="8f86d6f" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="111" height="24" src="//socialprocrew.com/wp-content/webp-express/webp-images/uploads/2025/07/VYCE2.png.webp" class="attachment-full size-full wp-image-7000 entered lazyloaded" alt="" data-lazy-src="//socialprocrew.com/wp-content/webp-express/webp-images/uploads/2025/07/VYCE2.png.webp" data-ll-status="loaded">															</div>
+				</div>
+				<div class="elementor-element elementor-element-8ef701b elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="8ef701b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default"><span class="deg">O QUE É O</span> VYCE?</p>				</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-c75867f elementor-widget__width-initial scroll-bottom elementor-widget elementor-widget-heading ativo" data-id="c75867f" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default">Imagine ter um mentor pessoal, <span class="deg">um especialista em sedução,</span> vida social, inteligência emocional e desenvolvimento masculino…</p>				</div>
+				</div>
+				<div class="elementor-element elementor-element-c67cffd elementor-widget__width-initial scroll-bottom elementor-widget elementor-widget-heading ativo" data-id="c67cffd" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default">Sempre no seu bolso, sempre pronto, sempre com você.
+<span style="color:#ffffff">Não importa se você tá:</span></p>				</div>
+				</div>
+				<div class="elementor-element elementor-element-ddb5f7b elementor-widget__width-initial lista elementor-icon-list-item elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="ddb5f7b" data-element_type="widget" data-e-type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+							<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item ativo">
+											<span class="elementor-icon-list-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 0C4.70103 0 0 4.70102 0 10.5C0 16.2989 4.70103 21 10.5 21C16.299 21 21 16.2989 21 10.5C21 4.70102 16.299 0 10.5 0ZM1.50617 10.5C1.50617 5.53284 5.53285 1.50615 10.5 1.50615C15.4672 1.50615 19.4938 5.53284 19.4938 10.5C19.4938 15.4672 15.4672 19.4938 10.5 19.4938C5.53285 19.4938 1.50617 15.4672 1.50617 10.5ZM14.7157 7.38918C14.9676 7.03115 14.8817 6.53665 14.5237 6.2847C14.1656 6.03274 13.6711 6.11875 13.4191 6.47679L8.94609 12.8332L7.1023 10.9553C6.79557 10.6429 6.29367 10.6383 5.98128 10.945C5.66887 11.2518 5.66427 11.7537 5.971 12.066L8.48126 14.6228C8.64608 14.7907 8.87697 14.8766 9.11145 14.8574C9.34594 14.8384 9.5598 14.716 9.69519 14.5235L14.7157 7.38918Z" fill="url(#paint0_linear_129_186)"></path><defs><linearGradient id="paint0_linear_129_186" x1="0" y1="10.5" x2="21" y2="10.5" gradientUnits="userSpaceOnUse"><stop stop-color="#F50052"></stop><stop offset="0.5453" stop-color="#CA1ECC"></stop><stop offset="1" stop-color="#6500FE"></stop></linearGradient></defs></svg>						</span>
+										<span class="elementor-icon-list-text">Indo pra uma festa e quer saber como agir.</span>
+									</li>
+								<li class="elementor-icon-list-item ativo">
+											<span class="elementor-icon-list-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 0C4.70103 0 0 4.70102 0 10.5C0 16.2989 4.70103 21 10.5 21C16.299 21 21 16.2989 21 10.5C21 4.70102 16.299 0 10.5 0ZM1.50617 10.5C1.50617 5.53284 5.53285 1.50615 10.5 1.50615C15.4672 1.50615 19.4938 5.53284 19.4938 10.5C19.4938 15.4672 15.4672 19.4938 10.5 19.4938C5.53285 19.4938 1.50617 15.4672 1.50617 10.5ZM14.7157 7.38918C14.9676 7.03115 14.8817 6.53665 14.5237 6.2847C14.1656 6.03274 13.6711 6.11875 13.4191 6.47679L8.94609 12.8332L7.1023 10.9553C6.79557 10.6429 6.29367 10.6383 5.98128 10.945C5.66887 11.2518 5.66427 11.7537 5.971 12.066L8.48126 14.6228C8.64608 14.7907 8.87697 14.8766 9.11145 14.8574C9.34594 14.8384 9.5598 14.716 9.69519 14.5235L14.7157 7.38918Z" fill="url(#paint0_linear_129_186)"></path><defs><linearGradient id="paint0_linear_129_186" x1="0" y1="10.5" x2="21" y2="10.5" gradientUnits="userSpaceOnUse"><stop stop-color="#F50052"></stop><stop offset="0.5453" stop-color="#CA1ECC"></stop><stop offset="1" stop-color="#6500FE"></stop></linearGradient></defs></svg>						</span>
+										<span class="elementor-icon-list-text">Conversando com uma mina e não sabe o que responder.</span>
+									</li>
+								<li class="elementor-icon-list-item ativo">
+											<span class="elementor-icon-list-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 0C4.70103 0 0 4.70102 0 10.5C0 16.2989 4.70103 21 10.5 21C16.299 21 21 16.2989 21 10.5C21 4.70102 16.299 0 10.5 0ZM1.50617 10.5C1.50617 5.53284 5.53285 1.50615 10.5 1.50615C15.4672 1.50615 19.4938 5.53284 19.4938 10.5C19.4938 15.4672 15.4672 19.4938 10.5 19.4938C5.53285 19.4938 1.50617 15.4672 1.50617 10.5ZM14.7157 7.38918C14.9676 7.03115 14.8817 6.53665 14.5237 6.2847C14.1656 6.03274 13.6711 6.11875 13.4191 6.47679L8.94609 12.8332L7.1023 10.9553C6.79557 10.6429 6.29367 10.6383 5.98128 10.945C5.66887 11.2518 5.66427 11.7537 5.971 12.066L8.48126 14.6228C8.64608 14.7907 8.87697 14.8766 9.11145 14.8574C9.34594 14.8384 9.5598 14.716 9.69519 14.5235L14.7157 7.38918Z" fill="url(#paint0_linear_129_186)"></path><defs><linearGradient id="paint0_linear_129_186" x1="0" y1="10.5" x2="21" y2="10.5" gradientUnits="userSpaceOnUse"><stop stop-color="#F50052"></stop><stop offset="0.5453" stop-color="#CA1ECC"></stop><stop offset="1" stop-color="#6500FE"></stop></linearGradient></defs></svg>						</span>
+										<span class="elementor-icon-list-text">Na dúvida se aquela garota tá afim ou tá te enrolando.</span>
+									</li>
+								<li class="elementor-icon-list-item ativo">
+											<span class="elementor-icon-list-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 0C4.70103 0 0 4.70102 0 10.5C0 16.2989 4.70103 21 10.5 21C16.299 21 21 16.2989 21 10.5C21 4.70102 16.299 0 10.5 0ZM1.50617 10.5C1.50617 5.53284 5.53285 1.50615 10.5 1.50615C15.4672 1.50615 19.4938 5.53284 19.4938 10.5C19.4938 15.4672 15.4672 19.4938 10.5 19.4938C5.53285 19.4938 1.50617 15.4672 1.50617 10.5ZM14.7157 7.38918C14.9676 7.03115 14.8817 6.53665 14.5237 6.2847C14.1656 6.03274 13.6711 6.11875 13.4191 6.47679L8.94609 12.8332L7.1023 10.9553C6.79557 10.6429 6.29367 10.6383 5.98128 10.945C5.66887 11.2518 5.66427 11.7537 5.971 12.066L8.48126 14.6228C8.64608 14.7907 8.87697 14.8766 9.11145 14.8574C9.34594 14.8384 9.5598 14.716 9.69519 14.5235L14.7157 7.38918Z" fill="url(#paint0_linear_129_186)"></path><defs><linearGradient id="paint0_linear_129_186" x1="0" y1="10.5" x2="21" y2="10.5" gradientUnits="userSpaceOnUse"><stop stop-color="#F50052"></stop><stop offset="0.5453" stop-color="#CA1ECC"></stop><stop offset="1" stop-color="#6500FE"></stop></linearGradient></defs></svg>						</span>
+										<span class="elementor-icon-list-text">Se perguntando como puxar assunto no Insta ou como transformar aquele DM em encontro.</span>
+									</li>
+								<li class="elementor-icon-list-item ativo">
+											<span class="elementor-icon-list-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 0C4.70103 0 0 4.70102 0 10.5C0 16.2989 4.70103 21 10.5 21C16.299 21 21 16.2989 21 10.5C21 4.70102 16.299 0 10.5 0ZM1.50617 10.5C1.50617 5.53284 5.53285 1.50615 10.5 1.50615C15.4672 1.50615 19.4938 5.53284 19.4938 10.5C19.4938 15.4672 15.4672 19.4938 10.5 19.4938C5.53285 19.4938 1.50617 15.4672 1.50617 10.5ZM14.7157 7.38918C14.9676 7.03115 14.8817 6.53665 14.5237 6.2847C14.1656 6.03274 13.6711 6.11875 13.4191 6.47679L8.94609 12.8332L7.1023 10.9553C6.79557 10.6429 6.29367 10.6383 5.98128 10.945C5.66887 11.2518 5.66427 11.7537 5.971 12.066L8.48126 14.6228C8.64608 14.7907 8.87697 14.8766 9.11145 14.8574C9.34594 14.8384 9.5598 14.716 9.69519 14.5235L14.7157 7.38918Z" fill="url(#paint0_linear_129_186)"></path><defs><linearGradient id="paint0_linear_129_186" x1="0" y1="10.5" x2="21" y2="10.5" gradientUnits="userSpaceOnUse"><stop stop-color="#F50052"></stop><stop offset="0.5453" stop-color="#CA1ECC"></stop><stop offset="1" stop-color="#6500FE"></stop></linearGradient></defs></svg>						</span>
+										<span class="elementor-icon-list-text">Ou até precisando de um tapa no mindset pra se tornar aquele cara que ela deseja e os outros homens respeitam.</span>
+									</li>
+						</ul>
+						</div>
+				</div>
+		<div class="elementor-element elementor-element-2d56b51 e-con-full e-flex e-con e-child" data-id="2d56b51" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-c2aa19c scroll-bottom elementor-widget elementor-widget-button ativo" data-id="c2aa19c" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-sm" href="#preco">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-icon">
+				<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.783045 12.0021C0.506889 11.7361 0.506889 11.3049 0.783045 11.0391L10.1826 1.98758H4.11149C3.72097 1.98758 3.40438 1.68272 3.40438 1.30666C3.40438 0.930595 3.72097 0.625732 4.11149 0.625732H11.8897C12.0773 0.625732 12.2571 0.697475 12.3898 0.825175C12.5223 0.952875 12.5968 1.12606 12.5968 1.30666V8.79682C12.5968 9.17288 12.2802 9.47775 11.8897 9.47775C11.4993 9.47775 11.1826 9.17288 11.1826 8.79682V2.95055L1.78304 12.0021C1.5069 12.2679 1.05919 12.2679 0.783045 12.0021Z" fill="black"></path></svg>			</span>
+									<span class="elementor-button-text">ADQUIRIR ACESSO</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+				<div class="elementor-element elementor-element-d57c122 elementor-widget__width-initial scroll-bottom e1 elementor-widget elementor-widget-heading ativo" data-id="d57c122" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default">O <span class="deg">VYCE</span> TÁ COM VOCÊ.</p>				</div>
+				</div>
+				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-fa1cb7e e-flex e-con-boxed e-con e-parent e-lazyloaded" data-id="fa1cb7e" data-element_type="container" data-e-type="container" id="fun">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-d6b71ef e-con-full scroll-bottom e-flex e-con e-child ativo" data-id="d6b71ef" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-2679e56 elementor-widget__width-initial elementor-widget elementor-widget-image" data-id="2679e56" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="111" height="24" src="//socialprocrew.com/wp-content/webp-express/webp-images/uploads/2025/07/VYCE2.png.webp" class="attachment-full size-full wp-image-7000 entered lazyloaded" alt="" data-lazy-src="//socialprocrew.com/wp-content/webp-express/webp-images/uploads/2025/07/VYCE2.png.webp" data-ll-status="loaded">															</div>
+				</div>
+				<div class="elementor-element elementor-element-23585da elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="23585da" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default"><span class="deg">COMO FUNCIONA O</span>  VYCE?</p>				</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-a8d1fdc elementor-widget__width-initial scroll-bottom elementor-widget elementor-widget-heading ativo" data-id="a8d1fdc" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default">O Vyce é um <span class="deg">Agente de Inteligência Artificial</span> desenvolvido pela Social Pro.</p>				</div>
+				</div>
+				<div class="elementor-element elementor-element-c4ccf11 elementor-widget__width-initial scroll-bottom elementor-widget elementor-widget-heading ativo" data-id="c4ccf11" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default">É como se você tivesse o Maxwell e todo nosso conhecimento, condensado
+<span style="color:#ffffff">num mentor que tá 24 horas disponível pra você.</span></p>				</div>
+				</div>
+		<div class="elementor-element elementor-element-b46212b e-con-full elementor-hidden-tablet elementor-hidden-mobile_extra elementor-hidden-mobile e-flex e-con e-child" data-id="b46212b" data-element_type="container" data-e-type="container">
+		<div class="elementor-element elementor-element-eeacbf0 e-con-full card scroll-bottom box e-flex e-con e-child ativo" data-id="eeacbf0" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-15e1b9c elementor-widget elementor-widget-video" data-id="15e1b9c" data-element_type="widget" data-e-type="widget" data-settings="{&quot;video_type&quot;:&quot;hosted&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;play_on_mobile&quot;:&quot;yes&quot;,&quot;mute&quot;:&quot;yes&quot;,&quot;loop&quot;:&quot;yes&quot;}" data-widget_type="video.default">
+				<div class="elementor-widget-container">
+							<div class="e-hosted-video elementor-wrapper elementor-open-inline">
+					<video class="elementor-video" src="https://socialprocrew.com/wp-content/uploads/2025/07/1.mp4" autoplay="" loop="" muted="muted" playsinline="" controlslist="nodownload"></video>
+				</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-bae734d elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="bae734d" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default">Você pode subir um print da conversa no WhatsApp, no Insta ou onde for, e ele te diz exatamente o que responder.</p>				</div>
+				</div>
+				<div class="elementor-element elementor-element-28bd869 elementor-widget__width-initial elementor-widget elementor-widget-image" data-id="28bd869" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="66" height="66" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2066%2066'%3E%3C/svg%3E" class="attachment-full size-full wp-image-7024" alt="" data-lazy-src="//socialprocrew.com/wp-content/webp-express/webp-images/uploads/2025/07/01.png.webp">															</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-93c72c4 e-con-full card scroll-bottom box e-flex e-con e-child ativo" data-id="93c72c4" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-2f9c00a elementor-widget elementor-widget-video" data-id="2f9c00a" data-element_type="widget" data-e-type="widget" data-settings="{&quot;video_type&quot;:&quot;hosted&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;play_on_mobile&quot;:&quot;yes&quot;,&quot;mute&quot;:&quot;yes&quot;,&quot;loop&quot;:&quot;yes&quot;}" data-widget_type="video.default">
+				<div class="elementor-widget-container">
+							<div class="e-hosted-video elementor-wrapper elementor-open-inline">
+					<video class="elementor-video" src="https://socialprocrew.com/wp-content/uploads/2025/07/4.mp4" autoplay="" loop="" muted="muted" playsinline="" controlslist="nodownload"></video>
+				</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-1d1320e elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="1d1320e" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default">Quer saber como comer ela bem comida? O Vyce é sem censura e vai te dizer todos os detalhes pesados do sexo até ela gozar muito.&nbsp;</p>				</div>
+				</div>
+				<div class="elementor-element elementor-element-92d5973 elementor-widget__width-initial elementor-widget elementor-widget-image" data-id="92d5973" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="66" height="66" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2066%2066'%3E%3C/svg%3E" class="attachment-full size-full wp-image-7027" alt="" data-lazy-src="//socialprocrew.com/wp-content/webp-express/webp-images/uploads/2025/07/04.png.webp">															</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-593bbc3 e-con-full card scroll-bottom box e1 e-flex e-con e-child ativo" data-id="593bbc3" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-e9e43bc elementor-widget elementor-widget-video" data-id="e9e43bc" data-element_type="widget" data-e-type="widget" data-settings="{&quot;video_type&quot;:&quot;hosted&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;play_on_mobile&quot;:&quot;yes&quot;,&quot;mute&quot;:&quot;yes&quot;,&quot;loop&quot;:&quot;yes&quot;}" data-widget_type="video.default">
+				<div class="elementor-widget-container">
+							<div class="e-hosted-video elementor-wrapper elementor-open-inline">
+					<video class="elementor-video" src="https://socialprocrew.com/wp-content/uploads/2025/07/2.mp4" autoplay="" loop="" muted="muted" playsinline="" controlslist="nodownload"></video>
+				</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-9504e3b elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="9504e3b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default">Pode pedir pra ele analisar o Instagram de uma garota e ele te entrega o mapa do tesouro pra gerar atração, conexão e desejo.</p>				</div>
+				</div>
+				<div class="elementor-element elementor-element-57885f1 elementor-widget__width-initial elementor-widget elementor-widget-image" data-id="57885f1" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="66" height="66" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2066%2066'%3E%3C/svg%3E" class="attachment-full size-full wp-image-7025" alt="" data-lazy-src="//socialprocrew.com/wp-content/webp-express/webp-images/uploads/2025/07/02.png.webp">															</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-9ef99f0 e-con-full card scroll-bottom box e1 e-flex e-con e-child ativo" data-id="9ef99f0" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-bacc956 elementor-widget elementor-widget-video" data-id="bacc956" data-element_type="widget" data-e-type="widget" data-settings="{&quot;video_type&quot;:&quot;hosted&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;play_on_mobile&quot;:&quot;yes&quot;,&quot;mute&quot;:&quot;yes&quot;,&quot;loop&quot;:&quot;yes&quot;}" data-widget_type="video.default">
+				<div class="elementor-widget-container">
+							<div class="e-hosted-video elementor-wrapper elementor-open-inline">
+					<video class="elementor-video" src="https://socialprocrew.com/wp-content/uploads/2025/07/5.mp4" autoplay="" loop="" muted="muted" playsinline="" controlslist="nodownload"></video>
+				</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-e0062df elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="e0062df" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default">Vai pra uma festa e não sabe como agir? O Vyce te ensina o posicionamento social, como abordar, como se destacar e como sair de lá com a garota mais gata do rolê.</p>				</div>
+				</div>
+				<div class="elementor-element elementor-element-d920454 elementor-widget__width-initial elementor-widget elementor-widget-image" data-id="d920454" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="66" height="66" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2066%2066'%3E%3C/svg%3E" class="attachment-full size-full wp-image-7028" alt="" data-lazy-src="//socialprocrew.com/wp-content/webp-express/webp-images/uploads/2025/07/05.png.webp">															</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-796db17 e-con-full card scroll-bottom box e2 e-flex e-con e-child ativo" data-id="796db17" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-4edd382 elementor-widget elementor-widget-video" data-id="4edd382" data-element_type="widget" data-e-type="widget" data-settings="{&quot;video_type&quot;:&quot;hosted&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;play_on_mobile&quot;:&quot;yes&quot;,&quot;mute&quot;:&quot;yes&quot;,&quot;loop&quot;:&quot;yes&quot;}" data-widget_type="video.default">
+				<div class="elementor-widget-container">
+							<div class="e-hosted-video elementor-wrapper elementor-open-inline">
+					<video class="elementor-video" src="https://socialprocrew.com/wp-content/uploads/2025/07/3.mp4" autoplay="" loop="" muted="muted" playsinline="" controlslist="nodownload"></video>
+				</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-113bf31 elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="113bf31" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default">Tem dúvida se ela tá te testando? Se tá te enrolando? Se tá te desafiando? O Vyce te revela na lata.</p>				</div>
+				</div>
+				<div class="elementor-element elementor-element-ec18f56 elementor-widget__width-initial elementor-widget elementor-widget-image" data-id="ec18f56" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="66" height="66" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2066%2066'%3E%3C/svg%3E" class="attachment-full size-full wp-image-7026" alt="" data-lazy-src="//socialprocrew.com/wp-content/webp-express/webp-images/uploads/2025/07/03.png.webp">															</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-0b7b85e e-con-full card scroll-bottom box e2 e-flex e-con e-child ativo" data-id="0b7b85e" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-eaa866c elementor-widget elementor-widget-video" data-id="eaa866c" data-element_type="widget" data-e-type="widget" data-settings="{&quot;video_type&quot;:&quot;hosted&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;play_on_mobile&quot;:&quot;yes&quot;,&quot;mute&quot;:&quot;yes&quot;,&quot;loop&quot;:&quot;yes&quot;}" data-widget_type="video.default">
+				<div class="elementor-widget-container">
+							<div class="e-hosted-video elementor-wrapper elementor-open-inline">
+					<video class="elementor-video" src="https://socialprocrew.com/wp-content/uploads/2025/07/6.mp4" autoplay="" loop="" muted="muted" playsinline="" controlslist="nodownload"></video>
+				</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-f0bea07 elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="f0bea07" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default">Tá na bad, inseguro, sem saber o que fazer? O Vyce te realinha na mentalidade, te puxa pro modo protagonista e te faz lembrar quem você é.</p>				</div>
+				</div>
+				<div class="elementor-element elementor-element-2b9bae2 elementor-widget__width-initial elementor-widget elementor-widget-image" data-id="2b9bae2" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="66" height="66" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2066%2066'%3E%3C/svg%3E" class="attachment-full size-full wp-image-7023" alt="" data-lazy-src="//socialprocrew.com/wp-content/webp-express/webp-images/uploads/2025/07/06.png.webp">															</div>
+				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-3cce6be e-con-full elementor-hidden-desktop elementor-hidden-laptop e-flex e-con e-child" data-id="3cce6be" data-element_type="container" data-e-type="container">
+		<div class="elementor-element elementor-element-27f77a9 e-con-full cardx scroll-bottom e-flex e-con e-child ativo" data-id="27f77a9" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-dbc0c8a elementor-widget elementor-widget-video" data-id="dbc0c8a" data-element_type="widget" data-e-type="widget" data-settings="{&quot;video_type&quot;:&quot;hosted&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;play_on_mobile&quot;:&quot;yes&quot;,&quot;mute&quot;:&quot;yes&quot;,&quot;loop&quot;:&quot;yes&quot;}" data-widget_type="video.default">
+				<div class="elementor-widget-container">
+							<div class="e-hosted-video elementor-wrapper elementor-open-inline">
+					<video class="elementor-video" src="https://socialprocrew.com/wp-content/uploads/2025/07/1.mp4" autoplay="" loop="" muted="muted" playsinline="" controlslist="nodownload"></video>
+				</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-0efe262 elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="0efe262" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default">Você pode subir um print da conversa no WhatsApp, no Insta ou onde for, e ele te diz exatamente o que responder.</p>				</div>
+				</div>
+				<div class="elementor-element elementor-element-47fdfee elementor-widget__width-initial elementor-widget elementor-widget-image" data-id="47fdfee" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="66" height="66" src="//socialprocrew.com/wp-content/webp-express/webp-images/uploads/2025/07/01.png.webp" class="attachment-full size-full wp-image-7024 entered lazyloaded" alt="" data-lazy-src="//socialprocrew.com/wp-content/webp-express/webp-images/uploads/2025/07/01.png.webp" data-ll-status="loaded">															</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-f12f077 e-con-full cardx scroll-bottom e-flex e-con e-child ativo" data-id="f12f077" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-5687f4f elementor-widget elementor-widget-video" data-id="5687f4f" data-element_type="widget" data-e-type="widget" data-settings="{&quot;video_type&quot;:&quot;hosted&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;play_on_mobile&quot;:&quot;yes&quot;,&quot;mute&quot;:&quot;yes&quot;,&quot;loop&quot;:&quot;yes&quot;}" data-widget_type="video.default">
+				<div class="elementor-widget-container">
+							<div class="e-hosted-video elementor-wrapper elementor-open-inline">
+					<video class="elementor-video" src="https://socialprocrew.com/wp-content/uploads/2025/07/2.mp4" autoplay="" loop="" muted="muted" playsinline="" controlslist="nodownload"></video>
+				</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-fe8a625 elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="fe8a625" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default">Pode pedir pra ele analisar o Instagram de uma garota e ele te entrega o mapa do tesouro pra gerar atração, conexão e desejo.</p>				</div>
+				</div>
+				<div class="elementor-element elementor-element-e75b967 elementor-widget__width-initial elementor-widget elementor-widget-image" data-id="e75b967" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="66" height="66" src="//socialprocrew.com/wp-content/webp-express/webp-images/uploads/2025/07/02.png.webp" class="attachment-full size-full wp-image-7025 entered lazyloaded" alt="" data-lazy-src="//socialprocrew.com/wp-content/webp-express/webp-images/uploads/2025/07/02.png.webp" data-ll-status="loaded">															</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-cca2e3a e-con-full cardx scroll-bottom e-flex e-con e-child ativo" data-id="cca2e3a" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-afc336a elementor-widget elementor-widget-video" data-id="afc336a" data-element_type="widget" data-e-type="widget" data-settings="{&quot;video_type&quot;:&quot;hosted&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;play_on_mobile&quot;:&quot;yes&quot;,&quot;mute&quot;:&quot;yes&quot;,&quot;loop&quot;:&quot;yes&quot;}" data-widget_type="video.default">
+				<div class="elementor-widget-container">
+							<div class="e-hosted-video elementor-wrapper elementor-open-inline">
+					<video class="elementor-video" src="https://socialprocrew.com/wp-content/uploads/2025/07/3.mp4" autoplay="" loop="" muted="muted" playsinline="" controlslist="nodownload"></video>
+				</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-08e75b2 elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="08e75b2" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default">Tem dúvida se ela tá te testando? <br>Se tá te enrolando? <br>Se tá te desafiando? <br>O Vyce te revela na lata.</p>				</div>
+				</div>
+				<div class="elementor-element elementor-element-1671aa9 elementor-widget__width-initial elementor-widget elementor-widget-image" data-id="1671aa9" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="66" height="66" src="//socialprocrew.com/wp-content/webp-express/webp-images/uploads/2025/07/03.png.webp" class="attachment-full size-full wp-image-7026 entered lazyloaded" alt="" data-lazy-src="//socialprocrew.com/wp-content/webp-express/webp-images/uploads/2025/07/03.png.webp" data-ll-status="loaded">															</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-24289e7 e-con-full cardx scroll-bottom e-flex e-con e-child ativo" data-id="24289e7" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-9f9bfb9 elementor-widget elementor-widget-video" data-id="9f9bfb9" data-element_type="widget" data-e-type="widget" data-settings="{&quot;video_type&quot;:&quot;hosted&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;play_on_mobile&quot;:&quot;yes&quot;,&quot;mute&quot;:&quot;yes&quot;,&quot;loop&quot;:&quot;yes&quot;}" data-widget_type="video.default">
+				<div class="elementor-widget-container">
+							<div class="e-hosted-video elementor-wrapper elementor-open-inline">
+					<video class="elementor-video" src="https://socialprocrew.com/wp-content/uploads/2025/07/4.mp4" autoplay="" loop="" muted="muted" playsinline="" controlslist="nodownload"></video>
+				</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-16d250c elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="16d250c" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default">Quer saber como comer ela bem comida? O Vyce é sem censura e vai te dizer todos os detalhes pesados do sexo até ela gozar muito.&nbsp;</p>				</div>
+				</div>
+				<div class="elementor-element elementor-element-7c1d687 elementor-widget__width-initial elementor-widget elementor-widget-image" data-id="7c1d687" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="66" height="66" src="//socialprocrew.com/wp-content/webp-express/webp-images/uploads/2025/07/04.png.webp" class="attachment-full size-full wp-image-7027 entered lazyloaded" alt="" data-lazy-src="//socialprocrew.com/wp-content/webp-express/webp-images/uploads/2025/07/04.png.webp" data-ll-status="loaded">															</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-a6193d9 e-con-full cardx scroll-bottom e-flex e-con e-child ativo" data-id="a6193d9" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-a9bb35f elementor-widget elementor-widget-video" data-id="a9bb35f" data-element_type="widget" data-e-type="widget" data-settings="{&quot;video_type&quot;:&quot;hosted&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;play_on_mobile&quot;:&quot;yes&quot;,&quot;mute&quot;:&quot;yes&quot;,&quot;loop&quot;:&quot;yes&quot;}" data-widget_type="video.default">
+				<div class="elementor-widget-container">
+							<div class="e-hosted-video elementor-wrapper elementor-open-inline">
+					<video class="elementor-video" src="https://socialprocrew.com/wp-content/uploads/2025/07/5.mp4" autoplay="" loop="" muted="muted" playsinline="" controlslist="nodownload"></video>
+				</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-88319e8 elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="88319e8" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default">Vai pra uma festa e não sabe como agir? O Vyce te ensina o posicionamento social, como abordar, como se destacar e como sair de lá com a garota mais gata do rolê.</p>				</div>
+				</div>
+				<div class="elementor-element elementor-element-068bfcd elementor-widget__width-initial elementor-widget elementor-widget-image" data-id="068bfcd" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="66" height="66" src="//socialprocrew.com/wp-content/webp-express/webp-images/uploads/2025/07/05.png.webp" class="attachment-full size-full wp-image-7028 entered lazyloaded" alt="" data-lazy-src="//socialprocrew.com/wp-content/webp-express/webp-images/uploads/2025/07/05.png.webp" data-ll-status="loaded">															</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-5420a7b e-con-full cardx scroll-bottom e-flex e-con e-child ativo" data-id="5420a7b" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-9308cae elementor-widget elementor-widget-video" data-id="9308cae" data-element_type="widget" data-e-type="widget" data-settings="{&quot;video_type&quot;:&quot;hosted&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;play_on_mobile&quot;:&quot;yes&quot;,&quot;mute&quot;:&quot;yes&quot;,&quot;loop&quot;:&quot;yes&quot;}" data-widget_type="video.default">
+				<div class="elementor-widget-container">
+							<div class="e-hosted-video elementor-wrapper elementor-open-inline">
+					<video class="elementor-video" src="https://socialprocrew.com/wp-content/uploads/2025/07/6.mp4" autoplay="" loop="" muted="muted" playsinline="" controlslist="nodownload"></video>
+				</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-4b255df elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="4b255df" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default">Tá na bad, inseguro, sem saber o que fazer? O Vyce te realinha na mentalidade, te puxa pro modo protagonista e te faz lembrar quem você é.</p>				</div>
+				</div>
+				<div class="elementor-element elementor-element-a356c01 elementor-widget__width-initial elementor-widget elementor-widget-image" data-id="a356c01" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="66" height="66" src="//socialprocrew.com/wp-content/webp-express/webp-images/uploads/2025/07/06.png.webp" class="attachment-full size-full wp-image-7023 entered lazyloaded" alt="" data-lazy-src="//socialprocrew.com/wp-content/webp-express/webp-images/uploads/2025/07/06.png.webp" data-ll-status="loaded">															</div>
+				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-b9f4a72 e-con-full e-flex e-con e-child" data-id="b9f4a72" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-642c7c4 elementor-widget elementor-widget-button" data-id="642c7c4" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-sm" href="#preco">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-icon">
+				<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.783045 12.0021C0.506889 11.7361 0.506889 11.3049 0.783045 11.0391L10.1826 1.98758H4.11149C3.72097 1.98758 3.40438 1.68272 3.40438 1.30666C3.40438 0.930595 3.72097 0.625732 4.11149 0.625732H11.8897C12.0773 0.625732 12.2571 0.697475 12.3898 0.825175C12.5223 0.952875 12.5968 1.12606 12.5968 1.30666V8.79682C12.5968 9.17288 12.2802 9.47775 11.8897 9.47775C11.4993 9.47775 11.1826 9.17288 11.1826 8.79682V2.95055L1.78304 12.0021C1.5069 12.2679 1.05919 12.2679 0.783045 12.0021Z" fill="black"></path></svg>			</span>
+									<span class="elementor-button-text">ADQUIRIR ACESSO</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+				<div class="elementor-element elementor-element-ec59a46 elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="ec59a46" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default">O <span class="deg">VYCE</span> NÃO TE ABANDONA.</p>				</div>
+				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-9fbb520 e-flex e-con-boxed e-con e-parent e-lazyloaded" data-id="9fbb520" data-element_type="container" data-e-type="container" id="sabe oq" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-e963d8a e-con-full e-flex e-con e-child" data-id="e963d8a" data-element_type="container" data-e-type="container">
+		<div class="elementor-element elementor-element-45e210d e-con-full e-flex e-con e-child" data-id="45e210d" data-element_type="container" data-e-type="container">
+		<div class="elementor-element elementor-element-5738f25 e-con-full e-flex e-con e-child" data-id="5738f25" data-element_type="container" data-e-type="container" data-settings="{&quot;sticky&quot;:&quot;top&quot;,&quot;sticky_on&quot;:[&quot;desktop&quot;,&quot;laptop&quot;,&quot;tablet&quot;],&quot;sticky_offset&quot;:90,&quot;sticky_parent&quot;:&quot;yes&quot;,&quot;sticky_effects_offset&quot;:0,&quot;sticky_anchor_link_offset&quot;:0}">
+		<div class="elementor-element elementor-element-2407a06 e-con-full e-flex e-con e-child" data-id="2407a06" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-25b6ea3 elementor-widget__width-initial elementor-widget elementor-widget-image" data-id="25b6ea3" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="111" height="24" src="//socialprocrew.com/wp-content/webp-express/webp-images/uploads/2025/07/VYCE2.png.webp" class="attachment-full size-full wp-image-7000 entered lazyloaded" alt="" data-lazy-src="//socialprocrew.com/wp-content/webp-express/webp-images/uploads/2025/07/VYCE2.png.webp" data-ll-status="loaded">															</div>
+				</div>
+				<div class="elementor-element elementor-element-4640ea8 elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="4640ea8" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default">O QUE O <span class="deg">VYCE SABE?</span> </p>				</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-0ed490c elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="0ed490c" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default">Ele <span class="deg">carrega na mente tudo</span> que você aprende na Social Pro:</p>				</div>
+				</div>
+				<div class="elementor-element elementor-element-0a5f23d elementor-hidden-tablet elementor-hidden-mobile_extra elementor-hidden-mobile elementor-widget elementor-widget-button" data-id="0a5f23d" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-sm" href="#preco">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-icon">
+				<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.783045 12.0021C0.506889 11.7361 0.506889 11.3049 0.783045 11.0391L10.1826 1.98758H4.11149C3.72097 1.98758 3.40438 1.68272 3.40438 1.30666C3.40438 0.930595 3.72097 0.625732 4.11149 0.625732H11.8897C12.0773 0.625732 12.2571 0.697475 12.3898 0.825175C12.5223 0.952875 12.5968 1.12606 12.5968 1.30666V8.79682C12.5968 9.17288 12.2802 9.47775 11.8897 9.47775C11.4993 9.47775 11.1826 9.17288 11.1826 8.79682V2.95055L1.78304 12.0021C1.5069 12.2679 1.05919 12.2679 0.783045 12.0021Z" fill="black"></path></svg>			</span>
+									<span class="elementor-button-text">ADQUIRIR ACESSO</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-3416f18 e-con-full e-flex e-con e-child" data-id="3416f18" data-element_type="container" data-e-type="container">
+		<div class="elementor-element elementor-element-c597b2a e-con-full scroll-right box e-flex e-con e-child ativo" data-id="c597b2a" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-2e79deb elementor-widget elementor-widget-heading" data-id="2e79deb" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default"><span class="tag">Sexualidade</span></p>				</div>
+				</div>
+				<div class="elementor-element elementor-element-655c388 elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="655c388" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default">Te prepara pra ser o cara que não só atrai, mas que vicia ela na cama, na energia e na sua presença.</p>				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-5b93958 e-con-full scroll-right box e-flex e-con e-child ativo" data-id="5b93958" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-97a1305 elementor-widget elementor-widget-heading" data-id="97a1305" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default"><span class="tag">Sedução</span></p>				</div>
+				</div>
+				<div class="elementor-element elementor-element-a32b9c3 elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="a32b9c3" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default">Do olhar ao beijo, do texto ao sexo.</p>				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-6439d94 e-con-full scroll-right box e-flex e-con e-child ativo" data-id="6439d94" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-e356059 elementor-widget elementor-widget-heading" data-id="e356059" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default"><span class="tag">Mindset</span></p>				</div>
+				</div>
+				<div class="elementor-element elementor-element-ab7dcf5 elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="ab7dcf5" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default">Destruição de crenças limitantes, desenvolvimento de confiança, autovalor e presença.</p>				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-6e87189 e-con-full scroll-right box e-flex e-con e-child ativo" data-id="6e87189" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-680f145 elementor-widget elementor-widget-heading" data-id="680f145" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default"><span class="tag">Dinâmica Social</span></p>				</div>
+				</div>
+				<div class="elementor-element elementor-element-bfa4d6b elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="bfa4d6b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default">Como ser visto como líder, como ter respeito e ser desejado no seu grupo, no seu rolê e na vida.</p>				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-9e71455 e-con-full scroll-right box e-flex e-con e-child ativo" data-id="9e71455" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-c459d29 elementor-widget elementor-widget-heading" data-id="c459d29" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default"><span class="tag">Leitura de Cenários</span></p>				</div>
+				</div>
+				<div class="elementor-element elementor-element-13e7c91 elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="13e7c91" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default">Festas, baladas, redes sociais, encontros, situações complexas… nada passa batido.</p>				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-097a989 e-con-full scroll-right box e-flex e-con e-child ativo" data-id="097a989" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-4ae57bc elementor-widget elementor-widget-heading" data-id="4ae57bc" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default"><span class="tag">Jogo do Texto</span></p>				</div>
+				</div>
+				<div class="elementor-element elementor-element-ca3b6b2 elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="ca3b6b2" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default">Ele lê sua conversa, analisa, e te entrega a resposta cirúrgica pra gerar atração, desejo e conexão.</p>				</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-8cb61e2 elementor-hidden-desktop elementor-hidden-laptop elementor-widget elementor-widget-button" data-id="8cb61e2" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-sm" href="https://pay.lowify.com.br/checkout?product_id=KtmRLY">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-icon">
+				<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.783045 12.0021C0.506889 11.7361 0.506889 11.3049 0.783045 11.0391L10.1826 1.98758H4.11149C3.72097 1.98758 3.40438 1.68272 3.40438 1.30666C3.40438 0.930595 3.72097 0.625732 4.11149 0.625732H11.8897C12.0773 0.625732 12.2571 0.697475 12.3898 0.825175C12.5223 0.952875 12.5968 1.12606 12.5968 1.30666V8.79682C12.5968 9.17288 12.2802 9.47775 11.8897 9.47775C11.4993 9.47775 11.1826 9.17288 11.1826 8.79682V2.95055L1.78304 12.0021C1.5069 12.2679 1.05919 12.2679 0.783045 12.0021Z" fill="black"></path></svg>			</span>
+									<span class="elementor-button-text">ADQUIRIR ACESSO</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-2249928 e-con-full e-flex e-con e-child" data-id="2249928" data-element_type="container" data-e-type="container" id="ep">
+				<div class="elementor-element elementor-element-2ef1a93 blur elementor-widget elementor-widget-image-carousel e-widget-swiper ativo" data-id="2ef1a93" data-element_type="widget" data-e-type="widget" data-settings="{&quot;navigation&quot;:&quot;none&quot;,&quot;autoplay_speed&quot;:0,&quot;speed&quot;:5000,&quot;autoplay&quot;:&quot;yes&quot;,&quot;infinite&quot;:&quot;yes&quot;,&quot;image_spacing_custom&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:20,&quot;sizes&quot;:[]},&quot;image_spacing_custom_laptop&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;image_spacing_custom_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;image_spacing_custom_mobile_extra&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;image_spacing_custom_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="image-carousel.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-image-carousel-wrapper swiper swiper-initialized swiper-horizontal swiper-ios swiper-backface-hidden" role="region" aria-roledescription="carousel" aria-label="Carrossel de imagens" dir="ltr">
+			<div class="elementor-image-carousel swiper-wrapper" aria-live="off" id="swiper-wrapper-ae718f8254d97259" style="transform: translate3d(-710px, 0px, 0px); transition-duration: 5000ms;"><div class="swiper-slide swiper-slide-duplicate" role="group" aria-roledescription="slide" aria-label="4 / 4" data-swiper-slide-index="3" style="width: 335px; margin-right: 20px;" aria-hidden="true" inert=""><figure class="swiper-slide-inner"><img width="480" height="52" decoding="async" class="swiper-slide-image" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20480%2052'%3E%3C/svg%3E" alt="c4" data-lazy-src="//socialprocrew.com/wp-content/uploads/2025/07/c4.svg"></figure></div>
+								<div class="swiper-slide swiper-slide-prev" role="group" aria-roledescription="slide" aria-label="1 / 4" data-swiper-slide-index="0" style="width: 335px; margin-right: 20px;" aria-hidden="true" inert=""><figure class="swiper-slide-inner"><img width="480" height="52" decoding="async" class="swiper-slide-image" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20480%2052'%3E%3C/svg%3E" alt="c1" data-lazy-src="//socialprocrew.com/wp-content/uploads/2025/07/c1.svg"></figure></div><div class="swiper-slide swiper-slide-active" role="group" aria-roledescription="slide" aria-label="2 / 4" data-swiper-slide-index="1" style="width: 335px; margin-right: 20px;"><figure class="swiper-slide-inner"><img width="480" height="52" decoding="async" class="swiper-slide-image entered lazyloaded" src="//socialprocrew.com/wp-content/uploads/2025/07/c2.svg" alt="c2" data-lazy-src="//socialprocrew.com/wp-content/uploads/2025/07/c2.svg" data-ll-status="loaded"></figure></div><div class="swiper-slide swiper-slide-next" role="group" aria-roledescription="slide" aria-label="3 / 4" data-swiper-slide-index="2" style="width: 335px; margin-right: 20px;" aria-hidden="true" inert=""><figure class="swiper-slide-inner"><img width="480" height="52" decoding="async" class="swiper-slide-image entered lazyloaded" src="//socialprocrew.com/wp-content/uploads/2025/07/c3.svg" alt="c3" data-lazy-src="//socialprocrew.com/wp-content/uploads/2025/07/c3.svg" data-ll-status="loaded"></figure></div><div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="4 / 4" data-swiper-slide-index="3" style="width: 335px; margin-right: 20px;" aria-hidden="true" inert=""><figure class="swiper-slide-inner"><img width="480" height="52" decoding="async" class="swiper-slide-image entered lazyloaded" src="//socialprocrew.com/wp-content/uploads/2025/07/c4.svg" alt="c4" data-lazy-src="//socialprocrew.com/wp-content/uploads/2025/07/c4.svg" data-ll-status="loaded"></figure></div>			<div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev" role="group" aria-roledescription="slide" aria-label="1 / 4" data-swiper-slide-index="0" style="width: 335px; margin-right: 20px;" aria-hidden="true" inert=""><figure class="swiper-slide-inner"><img width="480" height="52" decoding="async" class="swiper-slide-image entered lazyloaded" src="//socialprocrew.com/wp-content/uploads/2025/07/c1.svg" alt="c1" data-lazy-src="//socialprocrew.com/wp-content/uploads/2025/07/c1.svg" data-ll-status="loaded"></figure></div></div>
+							
+									<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-8630f34 blur elementor-widget elementor-widget-image-carousel e-widget-swiper ativo" data-id="8630f34" data-element_type="widget" data-e-type="widget" data-settings="{&quot;slides_to_show&quot;:&quot;2&quot;,&quot;navigation&quot;:&quot;none&quot;,&quot;autoplay_speed&quot;:0,&quot;speed&quot;:5000,&quot;slides_to_show_mobile&quot;:&quot;1&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;infinite&quot;:&quot;yes&quot;,&quot;image_spacing_custom&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:20,&quot;sizes&quot;:[]},&quot;image_spacing_custom_laptop&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;image_spacing_custom_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;image_spacing_custom_mobile_extra&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="image-carousel.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-image-carousel-wrapper swiper swiper-initialized swiper-horizontal swiper-rtl swiper-ios swiper-backface-hidden" role="region" aria-roledescription="carousel" aria-label="Carrossel de imagens" dir="rtl">
+			<div class="elementor-image-carousel swiper-wrapper" aria-live="off" id="swiper-wrapper-b7a15be982100eddc" style="transform: translate3d(710px, 0px, 0px); transition-duration: 5000ms;"><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" role="group" aria-roledescription="slide" aria-label="2 / 2" data-swiper-slide-index="1" style="width: 335px; margin-left: 20px;" aria-hidden="true" inert=""><figure class="swiper-slide-inner"><img width="750" height="52" decoding="async" class="swiper-slide-image entered lazyloaded" src="//socialprocrew.com/wp-content/uploads/2025/07/M2.svg" alt="M2" data-lazy-src="//socialprocrew.com/wp-content/uploads/2025/07/M2.svg" data-ll-status="loaded"></figure></div>
+								<div class="swiper-slide swiper-slide-prev swiper-slide-duplicate-next" role="group" aria-roledescription="slide" aria-label="1 / 2" data-swiper-slide-index="0" style="width: 335px; margin-left: 20px;" aria-hidden="true" inert=""><figure class="swiper-slide-inner"><img width="750" height="52" decoding="async" class="swiper-slide-image entered lazyloaded" src="//socialprocrew.com/wp-content/uploads/2025/07/M1.svg" alt="M1" data-lazy-src="//socialprocrew.com/wp-content/uploads/2025/07/M1.svg" data-ll-status="loaded"></figure></div><div class="swiper-slide swiper-slide-active" role="group" aria-roledescription="slide" aria-label="2 / 2" data-swiper-slide-index="1" style="width: 335px; margin-left: 20px;"><figure class="swiper-slide-inner"><img width="750" height="52" decoding="async" class="swiper-slide-image entered lazyloaded" src="//socialprocrew.com/wp-content/uploads/2025/07/M2.svg" alt="M2" data-lazy-src="//socialprocrew.com/wp-content/uploads/2025/07/M2.svg" data-ll-status="loaded"></figure></div>			<div class="swiper-slide swiper-slide-duplicate swiper-slide-next swiper-slide-duplicate-prev" role="group" aria-roledescription="slide" aria-label="1 / 2" data-swiper-slide-index="0" style="width: 335px; margin-left: 20px;" aria-hidden="true" inert=""><figure class="swiper-slide-inner"><img width="750" height="52" decoding="async" class="swiper-slide-image entered lazyloaded" src="//socialprocrew.com/wp-content/uploads/2025/07/M1.svg" alt="M1" data-lazy-src="//socialprocrew.com/wp-content/uploads/2025/07/M1.svg" data-ll-status="loaded"></figure></div></div>
+							
+									<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-c8cbb44 blur elementor-widget elementor-widget-image-carousel e-widget-swiper ativo" data-id="c8cbb44" data-element_type="widget" data-e-type="widget" data-settings="{&quot;navigation&quot;:&quot;none&quot;,&quot;autoplay_speed&quot;:0,&quot;speed&quot;:5000,&quot;autoplay&quot;:&quot;yes&quot;,&quot;infinite&quot;:&quot;yes&quot;,&quot;image_spacing_custom&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:20,&quot;sizes&quot;:[]},&quot;image_spacing_custom_laptop&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;image_spacing_custom_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;image_spacing_custom_mobile_extra&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;image_spacing_custom_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="image-carousel.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-image-carousel-wrapper swiper swiper-initialized swiper-horizontal swiper-ios swiper-backface-hidden" role="region" aria-roledescription="carousel" aria-label="Carrossel de imagens" dir="ltr">
+			<div class="elementor-image-carousel swiper-wrapper" aria-live="off" id="swiper-wrapper-0c1bac2583f93148" style="transform: translate3d(-710px, 0px, 0px); transition-duration: 5000ms;"><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" role="group" aria-roledescription="slide" aria-label="3 / 3" data-swiper-slide-index="2" style="width: 335px; margin-right: 20px;" aria-hidden="true" inert=""><figure class="swiper-slide-inner"><img width="480" height="52" decoding="async" class="swiper-slide-image" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20480%2052'%3E%3C/svg%3E" alt="B3" data-lazy-src="//socialprocrew.com/wp-content/uploads/2025/07/B3.svg"></figure></div>
+								<div class="swiper-slide swiper-slide-prev" role="group" aria-roledescription="slide" aria-label="1 / 3" data-swiper-slide-index="0" style="width: 335px; margin-right: 20px;" aria-hidden="true" inert=""><figure class="swiper-slide-inner"><img width="480" height="52" decoding="async" class="swiper-slide-image entered lazyloaded" src="//socialprocrew.com/wp-content/uploads/2025/07/B1.svg" alt="B1" data-lazy-src="//socialprocrew.com/wp-content/uploads/2025/07/B1.svg" data-ll-status="loaded"></figure></div><div class="swiper-slide swiper-slide-active" role="group" aria-roledescription="slide" aria-label="2 / 3" data-swiper-slide-index="1" style="width: 335px; margin-right: 20px;"><figure class="swiper-slide-inner"><img width="480" height="52" decoding="async" class="swiper-slide-image entered lazyloaded" src="//socialprocrew.com/wp-content/uploads/2025/07/B2.svg" alt="B2" data-lazy-src="//socialprocrew.com/wp-content/uploads/2025/07/B2.svg" data-ll-status="loaded"></figure></div><div class="swiper-slide swiper-slide-next" role="group" aria-roledescription="slide" aria-label="3 / 3" data-swiper-slide-index="2" style="width: 335px; margin-right: 20px;" aria-hidden="true" inert=""><figure class="swiper-slide-inner"><img width="480" height="52" decoding="async" class="swiper-slide-image entered lazyloaded" src="//socialprocrew.com/wp-content/uploads/2025/07/B3.svg" alt="B3" data-lazy-src="//socialprocrew.com/wp-content/uploads/2025/07/B3.svg" data-ll-status="loaded"></figure></div>			<div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev" role="group" aria-roledescription="slide" aria-label="1 / 3" data-swiper-slide-index="0" style="width: 335px; margin-right: 20px;" aria-hidden="true" inert=""><figure class="swiper-slide-inner"><img width="480" height="52" decoding="async" class="swiper-slide-image entered lazyloaded" src="//socialprocrew.com/wp-content/uploads/2025/07/B1.svg" alt="B1" data-lazy-src="//socialprocrew.com/wp-content/uploads/2025/07/B1.svg" data-ll-status="loaded"></figure></div></div>
+							
+									<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+						</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-1f64066 e-con-full e-flex e-con e-child" data-id="1f64066" data-element_type="container" data-e-type="container" id="bon">
+		<div class="elementor-element elementor-element-952c66f e-con-full e-flex e-con e-child" data-id="952c66f" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-9366ad0 elementor-widget__width-initial scroll-bottom elementor-widget elementor-widget-heading ativo" data-id="9366ad0" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default">BÔNUS ABSURDOS:</p>				</div>
+				</div>
+				<div class="elementor-element elementor-element-80652de scroll-bottom e1 elementor-hidden-tablet elementor-hidden-mobile_extra elementor-hidden-mobile elementor-widget elementor-widget-button ativo" data-id="80652de" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-sm" href="#preco">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-icon">
+				<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.783045 12.0021C0.506889 11.7361 0.506889 11.3049 0.783045 11.0391L10.1826 1.98758H4.11149C3.72097 1.98758 3.40438 1.68272 3.40438 1.30666C3.40438 0.930595 3.72097 0.625732 4.11149 0.625732H11.8897C12.0773 0.625732 12.2571 0.697475 12.3898 0.825175C12.5223 0.952875 12.5968 1.12606 12.5968 1.30666V8.79682C12.5968 9.17288 12.2802 9.47775 11.8897 9.47775C11.4993 9.47775 11.1826 9.17288 11.1826 8.79682V2.95055L1.78304 12.0021C1.5069 12.2679 1.05919 12.2679 0.783045 12.0021Z" fill="black"></path></svg>			</span>
+									<span class="elementor-button-text">ADQUIRIR ACESSO</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-3389a0e e-con-full e-flex e-con e-child" data-id="3389a0e" data-element_type="container" data-e-type="container">
+		<div class="elementor-element elementor-element-a0e2d4b e-con-full e-flex e-con e-child" data-id="a0e2d4b" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-2f0db80 elementor-widget__width-initial scroll-left elementor-widget elementor-widget-heading ativo" data-id="2f0db80" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default">O Vyce gera planos personalizados, ROADMAPS, mapas mentais, planilhas e tudo mais que você quiser e  <span class="deg">ainda te libera em word ou PDF para ter no seu celular. </span></p>				</div>
+				</div>
+				<div class="elementor-element elementor-element-06155df elementor-widget__width-initial scroll-left elementor-widget elementor-widget-heading ativo" data-id="06155df" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default">PDF • ROADMAPS • PLANILHAS • IMAGENS • E ETC!</p>				</div>
+				</div>
+				<div class="elementor-element elementor-element-2739861 scroll-bottom e1 elementor-hidden-desktop elementor-hidden-laptop elementor-widget elementor-widget-button ativo" data-id="2739861" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-sm" href="#preco">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-icon">
+				<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.783045 12.0021C0.506889 11.7361 0.506889 11.3049 0.783045 11.0391L10.1826 1.98758H4.11149C3.72097 1.98758 3.40438 1.68272 3.40438 1.30666C3.40438 0.930595 3.72097 0.625732 4.11149 0.625732H11.8897C12.0773 0.625732 12.2571 0.697475 12.3898 0.825175C12.5223 0.952875 12.5968 1.12606 12.5968 1.30666V8.79682C12.5968 9.17288 12.2802 9.47775 11.8897 9.47775C11.4993 9.47775 11.1826 9.17288 11.1826 8.79682V2.95055L1.78304 12.0021C1.5069 12.2679 1.05919 12.2679 0.783045 12.0021Z" fill="black"></path></svg>			</span>
+									<span class="elementor-button-text">ADQUIRIR ACESSO</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-dab4645 e-con-full e-flex e-con e-child" data-id="dab4645" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-c4ba888 elementor-widget__width-initial elementor-absolute e-transform elementor-widget elementor-widget-image" data-id="c4ba888" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;_transform_scale_effect&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1.7,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_laptop&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_mobile_extra&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="928" height="787" src="//socialprocrew.com/wp-content/webp-express/webp-images/uploads/2025/07/image-8-1.png.webp" class="attachment-full size-full wp-image-7087 entered lazyloaded" alt="" data-lazy-srcset="//socialprocrew.com/wp-content/uploads/2025/07/image-8-1.png 928w,   //socialprocrew.com/wp-content/uploads/2025/07/image-8-1-300x254.png 300w,   //socialprocrew.com/wp-content/uploads/2025/07/image-8-1-768x651.png 768w" data-lazy-sizes="(max-width: 928px) 100vw, 928px" data-lazy-src="//socialprocrew.com/wp-content/webp-express/webp-images/uploads/2025/07/image-8-1.png.webp" data-ll-status="loaded" sizes="(max-width: 928px) 100vw, 928px" srcset="//socialprocrew.com/wp-content/uploads/2025/07/image-8-1.png 928w,   //socialprocrew.com/wp-content/uploads/2025/07/image-8-1-300x254.png 300w,   //socialprocrew.com/wp-content/uploads/2025/07/image-8-1-768x651.png 768w">															</div>
+				</div>
+				<div class="elementor-element elementor-element-5730b04 elementor-widget-mobile__width-initial blur elementor-widget elementor-widget-image ativo" data-id="5730b04" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="461" height="454" src="//socialprocrew.com/wp-content/webp-express/webp-images/uploads/2025/07/1.png.webp" class="attachment-full size-full wp-image-7086 entered lazyloaded" alt="" data-lazy-srcset="//socialprocrew.com/wp-content/uploads/2025/07/1.png 461w,   //socialprocrew.com/wp-content/uploads/2025/07/1-300x295.png 300w" data-lazy-sizes="(max-width: 461px) 100vw, 461px" data-lazy-src="//socialprocrew.com/wp-content/webp-express/webp-images/uploads/2025/07/1.png.webp" data-ll-status="loaded" sizes="(max-width: 461px) 100vw, 461px" srcset="//socialprocrew.com/wp-content/uploads/2025/07/1.png 461w,   //socialprocrew.com/wp-content/uploads/2025/07/1-300x295.png 300w">															</div>
+				</div>
+				</div>
+				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-178f9f0 e-flex e-con-boxed e-con e-parent e-lazyloaded" data-id="178f9f0" data-element_type="container" data-e-type="container">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-2a2d0ec elementor-widget__width-inherit elementor-widget elementor-widget-heading elementor-motion-effects-parent" data-id="2a2d0ec" data-element_type="widget" data-e-type="widget" data-settings="{&quot;motion_fx_motion_fx_scrolling&quot;:&quot;yes&quot;,&quot;motion_fx_translateX_effect&quot;:&quot;yes&quot;,&quot;motion_fx_translateX_speed&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:4,&quot;sizes&quot;:[]},&quot;motion_fx_translateX_affectedRange&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:{&quot;start&quot;:0,&quot;end&quot;:100}},&quot;motion_fx_devices&quot;:[&quot;desktop&quot;,&quot;laptop&quot;,&quot;tablet&quot;,&quot;mobile_extra&quot;,&quot;mobile&quot;]}" data-widget_type="heading.default">
+				<div class="elementor-widget-container elementor-motion-effects-element" style="--translateX: -200px; --e-transform-transition-duration: 100ms; transform: translateX(var(--translateX));">
+					<p class="elementor-heading-title elementor-size-default">guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    guia    •    sedução    •    masculinidade    •    vyce    •    </p>				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-9b20b86 e-flex e-con-boxed e-con e-parent e-lazyloaded" data-id="9b20b86" data-element_type="container" data-e-type="container" id="fim" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-e10bd99 e-con-full e-flex e-con e-child" data-id="e10bd99" data-element_type="container" data-e-type="container" id="preco">
+				<div class="elementor-element elementor-element-ab027d5 elementor-widget__width-initial scroll-bottom elementor-widget elementor-widget-image ativo" data-id="ab027d5" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="525" height="128" src="//socialprocrew.com/wp-content/webp-express/webp-images/uploads/2025/07/Frame-32.png.webp" class="attachment-full size-full wp-image-7062 entered lazyloaded" alt="" data-lazy-srcset="//socialprocrew.com/wp-content/uploads/2025/07/Frame-32.png 525w,   //socialprocrew.com/wp-content/uploads/2025/07/Frame-32-300x73.png 300w" data-lazy-sizes="(max-width: 525px) 100vw, 525px" data-lazy-src="//socialprocrew.com/wp-content/webp-express/webp-images/uploads/2025/07/Frame-32.png.webp" data-ll-status="loaded" sizes="(max-width: 525px) 100vw, 525px" srcset="//socialprocrew.com/wp-content/uploads/2025/07/Frame-32.png 525w,   //socialprocrew.com/wp-content/uploads/2025/07/Frame-32-300x73.png 300w">															</div>
+				</div>
+				<div class="elementor-element elementor-element-ac75996 elementor-widget__width-initial scroll-bottom elementor-widget elementor-widget-heading ativo" data-id="ac75996" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default">TÁ NA SUA <span style="color:#5E9CF8">MÃO</span> AGORA:</p>				</div>
+				</div>
+				<div class="elementor-element elementor-element-169f601 elementor-widget__width-initial lista elementor-icon-list-item elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="169f601" data-element_type="widget" data-e-type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+							<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item ativo">
+											<span class="elementor-icon-list-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none"><mask id="mask0_129_1579" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="33" height="33"><path d="M33 0H0V33H33V0Z" fill="white"></path></mask><g mask="url(#mask0_129_1579)"><path d="M28.6525 0H3.90247C1.62429 0 -0.222534 1.84683 -0.222534 4.125V28.875C-0.222534 31.1532 1.62429 33 3.90247 33H28.6525C30.9306 33 32.7775 31.1532 32.7775 28.875V4.125C32.7775 1.84683 30.9306 0 28.6525 0Z" fill="#EFF6FF" fill-opacity="0.05"></path><path d="M28.6525 0.257812H3.90247C1.76668 0.257812 0.0352783 1.98921 0.0352783 4.125V28.875C0.0352783 31.0108 1.76668 32.7422 3.90247 32.7422H28.6525C30.7883 32.7422 32.5197 31.0108 32.5197 28.875V4.125C32.5197 1.98921 30.7883 0.257812 28.6525 0.257812Z" stroke="white" stroke-opacity="0.1" stroke-width="0.515625"></path><g filter="url(#filter0_f_129_1579)"><path d="M18.3128 26.2969H15.9844C12.8519 26.2969 10.3125 28.8363 10.3125 31.9688C10.3125 35.1012 12.8519 37.6406 15.9844 37.6406H18.3128C21.4453 37.6406 23.9847 35.1012 23.9847 31.9688C23.9847 28.8363 21.4453 26.2969 18.3128 26.2969Z" fill="#3B82F6"></path></g></g><path d="M15.444 18.808C16.34 17.4192 17.0008 16.3608 17.4264 15.6328C17.852 14.9048 18.1376 14.3448 18.2832 13.9528C18.4288 13.5608 18.5016 13.1968 18.5016 12.8608C18.5016 11.6288 17.7624 11.0128 16.284 11.0128C15.1976 11.0128 14.5032 11.3712 14.2008 12.088C14.1224 12.2784 14.0664 12.4688 14.0328 12.6592C13.9992 12.8384 13.9824 13.0792 13.9824 13.3816H12.6384C12.6384 12.9896 12.6608 12.6592 12.7056 12.3904C12.7504 12.1104 12.8288 11.8472 12.9408 11.6008C13.1984 11.0408 13.6128 10.6152 14.184 10.324C14.7664 10.0216 15.4832 9.8704 16.3344 9.8704C17.5328 9.8704 18.4344 10.1336 19.0392 10.66C19.644 11.1864 19.9464 11.9088 19.9464 12.8272C19.9464 13.2192 19.8736 13.6168 19.728 14.02C19.5824 14.4232 19.308 14.9776 18.9048 15.6832C18.5016 16.3888 17.8632 17.4304 16.9896 18.808H15.444ZM16.1664 22.2352C15.8864 22.2352 15.6568 22.1568 15.4776 22C15.3096 21.832 15.2256 21.608 15.2256 21.328C15.2256 21.048 15.3096 20.824 15.4776 20.656C15.6568 20.488 15.8864 20.404 16.1664 20.404C16.4464 20.404 16.676 20.488 16.8552 20.656C17.0344 20.824 17.124 21.048 17.124 21.328C17.124 21.5968 17.0344 21.8152 16.8552 21.9832C16.676 22.1512 16.4464 22.2352 16.1664 22.2352Z" fill="url(#paint0_linear_129_1579)"></path><defs><filter id="filter0_f_129_1579" x="0.3125" y="16.2969" width="33.6722" height="31.3438" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"></filter><linearGradient id="paint0_linear_129_1579" x1="16.5" y1="6" x2="16.5" y2="29" gradientUnits="userSpaceOnUse"><stop stop-color="#5E9CF8"></stop><stop offset="1" stop-color="#DBE9FD"></stop></linearGradient></defs></svg>						</span>
+										<span class="elementor-icon-list-text">Quer continuar perdido?</span>
+									</li>
+								<li class="elementor-icon-list-item ativo">
+											<span class="elementor-icon-list-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none"><mask id="mask0_129_1579" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="33" height="33"><path d="M33 0H0V33H33V0Z" fill="white"></path></mask><g mask="url(#mask0_129_1579)"><path d="M28.6525 0H3.90247C1.62429 0 -0.222534 1.84683 -0.222534 4.125V28.875C-0.222534 31.1532 1.62429 33 3.90247 33H28.6525C30.9306 33 32.7775 31.1532 32.7775 28.875V4.125C32.7775 1.84683 30.9306 0 28.6525 0Z" fill="#EFF6FF" fill-opacity="0.05"></path><path d="M28.6525 0.257812H3.90247C1.76668 0.257812 0.0352783 1.98921 0.0352783 4.125V28.875C0.0352783 31.0108 1.76668 32.7422 3.90247 32.7422H28.6525C30.7883 32.7422 32.5197 31.0108 32.5197 28.875V4.125C32.5197 1.98921 30.7883 0.257812 28.6525 0.257812Z" stroke="white" stroke-opacity="0.1" stroke-width="0.515625"></path><g filter="url(#filter0_f_129_1579)"><path d="M18.3128 26.2969H15.9844C12.8519 26.2969 10.3125 28.8363 10.3125 31.9688C10.3125 35.1012 12.8519 37.6406 15.9844 37.6406H18.3128C21.4453 37.6406 23.9847 35.1012 23.9847 31.9688C23.9847 28.8363 21.4453 26.2969 18.3128 26.2969Z" fill="#3B82F6"></path></g></g><path d="M15.444 18.808C16.34 17.4192 17.0008 16.3608 17.4264 15.6328C17.852 14.9048 18.1376 14.3448 18.2832 13.9528C18.4288 13.5608 18.5016 13.1968 18.5016 12.8608C18.5016 11.6288 17.7624 11.0128 16.284 11.0128C15.1976 11.0128 14.5032 11.3712 14.2008 12.088C14.1224 12.2784 14.0664 12.4688 14.0328 12.6592C13.9992 12.8384 13.9824 13.0792 13.9824 13.3816H12.6384C12.6384 12.9896 12.6608 12.6592 12.7056 12.3904C12.7504 12.1104 12.8288 11.8472 12.9408 11.6008C13.1984 11.0408 13.6128 10.6152 14.184 10.324C14.7664 10.0216 15.4832 9.8704 16.3344 9.8704C17.5328 9.8704 18.4344 10.1336 19.0392 10.66C19.644 11.1864 19.9464 11.9088 19.9464 12.8272C19.9464 13.2192 19.8736 13.6168 19.728 14.02C19.5824 14.4232 19.308 14.9776 18.9048 15.6832C18.5016 16.3888 17.8632 17.4304 16.9896 18.808H15.444ZM16.1664 22.2352C15.8864 22.2352 15.6568 22.1568 15.4776 22C15.3096 21.832 15.2256 21.608 15.2256 21.328C15.2256 21.048 15.3096 20.824 15.4776 20.656C15.6568 20.488 15.8864 20.404 16.1664 20.404C16.4464 20.404 16.676 20.488 16.8552 20.656C17.0344 20.824 17.124 21.048 17.124 21.328C17.124 21.5968 17.0344 21.8152 16.8552 21.9832C16.676 22.1512 16.4464 22.2352 16.1664 22.2352Z" fill="url(#paint0_linear_129_1579)"></path><defs><filter id="filter0_f_129_1579" x="0.3125" y="16.2969" width="33.6722" height="31.3438" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"></filter><linearGradient id="paint0_linear_129_1579" x1="16.5" y1="6" x2="16.5" y2="29" gradientUnits="userSpaceOnUse"><stop stop-color="#5E9CF8"></stop><stop offset="1" stop-color="#DBE9FD"></stop></linearGradient></defs></svg>						</span>
+										<span class="elementor-icon-list-text">Quer continuar na dúvida?</span>
+									</li>
+								<li class="elementor-icon-list-item ativo">
+											<span class="elementor-icon-list-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none"><mask id="mask0_129_1579" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="33" height="33"><path d="M33 0H0V33H33V0Z" fill="white"></path></mask><g mask="url(#mask0_129_1579)"><path d="M28.6525 0H3.90247C1.62429 0 -0.222534 1.84683 -0.222534 4.125V28.875C-0.222534 31.1532 1.62429 33 3.90247 33H28.6525C30.9306 33 32.7775 31.1532 32.7775 28.875V4.125C32.7775 1.84683 30.9306 0 28.6525 0Z" fill="#EFF6FF" fill-opacity="0.05"></path><path d="M28.6525 0.257812H3.90247C1.76668 0.257812 0.0352783 1.98921 0.0352783 4.125V28.875C0.0352783 31.0108 1.76668 32.7422 3.90247 32.7422H28.6525C30.7883 32.7422 32.5197 31.0108 32.5197 28.875V4.125C32.5197 1.98921 30.7883 0.257812 28.6525 0.257812Z" stroke="white" stroke-opacity="0.1" stroke-width="0.515625"></path><g filter="url(#filter0_f_129_1579)"><path d="M18.3128 26.2969H15.9844C12.8519 26.2969 10.3125 28.8363 10.3125 31.9688C10.3125 35.1012 12.8519 37.6406 15.9844 37.6406H18.3128C21.4453 37.6406 23.9847 35.1012 23.9847 31.9688C23.9847 28.8363 21.4453 26.2969 18.3128 26.2969Z" fill="#3B82F6"></path></g></g><path d="M15.444 18.808C16.34 17.4192 17.0008 16.3608 17.4264 15.6328C17.852 14.9048 18.1376 14.3448 18.2832 13.9528C18.4288 13.5608 18.5016 13.1968 18.5016 12.8608C18.5016 11.6288 17.7624 11.0128 16.284 11.0128C15.1976 11.0128 14.5032 11.3712 14.2008 12.088C14.1224 12.2784 14.0664 12.4688 14.0328 12.6592C13.9992 12.8384 13.9824 13.0792 13.9824 13.3816H12.6384C12.6384 12.9896 12.6608 12.6592 12.7056 12.3904C12.7504 12.1104 12.8288 11.8472 12.9408 11.6008C13.1984 11.0408 13.6128 10.6152 14.184 10.324C14.7664 10.0216 15.4832 9.8704 16.3344 9.8704C17.5328 9.8704 18.4344 10.1336 19.0392 10.66C19.644 11.1864 19.9464 11.9088 19.9464 12.8272C19.9464 13.2192 19.8736 13.6168 19.728 14.02C19.5824 14.4232 19.308 14.9776 18.9048 15.6832C18.5016 16.3888 17.8632 17.4304 16.9896 18.808H15.444ZM16.1664 22.2352C15.8864 22.2352 15.6568 22.1568 15.4776 22C15.3096 21.832 15.2256 21.608 15.2256 21.328C15.2256 21.048 15.3096 20.824 15.4776 20.656C15.6568 20.488 15.8864 20.404 16.1664 20.404C16.4464 20.404 16.676 20.488 16.8552 20.656C17.0344 20.824 17.124 21.048 17.124 21.328C17.124 21.5968 17.0344 21.8152 16.8552 21.9832C16.676 22.1512 16.4464 22.2352 16.1664 22.2352Z" fill="url(#paint0_linear_129_1579)"></path><defs><filter id="filter0_f_129_1579" x="0.3125" y="16.2969" width="33.6722" height="31.3438" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"></filter><linearGradient id="paint0_linear_129_1579" x1="16.5" y1="6" x2="16.5" y2="29" gradientUnits="userSpaceOnUse"><stop stop-color="#5E9CF8"></stop><stop offset="1" stop-color="#DBE9FD"></stop></linearGradient></defs></svg>						</span>
+										<span class="elementor-icon-list-text">Quer continuar vivendo pela metade?</span>
+									</li>
+						</ul>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-c663bae blur elementor-widget-divider--view-line elementor-widget elementor-widget-divider ativo" data-id="c663bae" data-element_type="widget" data-e-type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-969a93a elementor-widget__width-initial scroll-bottom elementor-widget elementor-widget-heading ativo" data-id="969a93a" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default">Ou quer ter um mentor no bolso, pronto pra te transformar, <span class="deg">te guiar e te fazer viver a vida que você nasceu pra viver?</span></p>				</div>
+				</div>
+				<div class="elementor-element elementor-element-1556262 scroll-bottom elementor-widget elementor-widget-button ativo" data-id="1556262" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-sm" href="https://pay.lowify.com.br/checkout?product_id=KtmRLY">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-icon">
+				<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.783045 12.0021C0.506889 11.7361 0.506889 11.3049 0.783045 11.0391L10.1826 1.98758H4.11149C3.72097 1.98758 3.40438 1.68272 3.40438 1.30666C3.40438 0.930595 3.72097 0.625732 4.11149 0.625732H11.8897C12.0773 0.625732 12.2571 0.697475 12.3898 0.825175C12.5223 0.952875 12.5968 1.12606 12.5968 1.30666V8.79682C12.5968 9.17288 12.2802 9.47775 11.8897 9.47775C11.4993 9.47775 11.1826 9.17288 11.1826 8.79682V2.95055L1.78304 12.0021C1.5069 12.2679 1.05919 12.2679 0.783045 12.0021Z" fill="black"></path></svg>			</span>
+									<span class="elementor-button-text">QUERO O VYCE AGORA</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-091f078 e-flex e-con-boxed e-con e-child" data-id="091f078" data-element_type="container" data-e-type="container" data-settings="{&quot;position&quot;:&quot;absolute&quot;}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-86141ff elementor-widget__width-initial elementor-widget elementor-widget-image" data-id="86141ff" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="111" height="24" src="//socialprocrew.com/wp-content/webp-express/webp-images/uploads/2025/07/VYCE2.png.webp" class="attachment-full size-full wp-image-7000 entered lazyloaded" alt="" data-lazy-src="//socialprocrew.com/wp-content/webp-express/webp-images/uploads/2025/07/VYCE2.png.webp" data-ll-status="loaded">															</div>
+				</div>
+				<div class="elementor-element elementor-element-850382c elementor-widget__width-initial elementor-widget elementor-widget-html" data-id="850382c" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+					<script data-minify="1" src="//socialprocrew.com/wp-content/cache/min/1/npm/gsap@3.12.5/dist/gsap.min.js?ver=1773316128" onload="nowprocket()" defer=""></script>
+<script data-minify="1" src="//socialprocrew.com/wp-content/cache/min/1/npm/gsap@3.12.5/dist/ScrollTrigger.min.js?ver=1773316128" onload="nowprocket()" defer=""></script>
+
+<script>
+    const elementos = document.querySelectorAll(".scroll-left, .scroll-right, .scroll-top, .scroll-bottom, .blur, .lista .elementor-icon-list-item");
+    const posicaoScroll = window.innerHeight * 0.5;
+    
+    function fadeScroll(){
+        elementos.forEach(elemento =>{
+            const elementoTop = elemento.getBoundingClientRect().top- posicaoScroll;
+            
+            if(elementoTop < 320){
+                elemento.classList.add("ativo");
+            }
+            else {
+                elemento.classList.remove("ativo");
+            }
+        });
+    }
+    
+    window.addEventListener("scroll", fadeScroll);
+</script>				</div>
+				</div>
+				<div class="elementor-element elementor-element-50e3e08 elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="50e3e08" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default">TODOS DIREITOS RESERVADOS</p>				</div>
+				</div>
+					</div>
+				</div>
+				<div class="elementor-element elementor-element-1f35596 elementor-widget__width-inherit elementor-absolute elementor-widget elementor-widget-heading elementor-motion-effects-parent" data-id="1f35596" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;motion_fx_motion_fx_scrolling&quot;:&quot;yes&quot;,&quot;motion_fx_translateX_effect&quot;:&quot;yes&quot;,&quot;motion_fx_translateX_speed&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:4,&quot;sizes&quot;:[]},&quot;motion_fx_translateX_affectedRange&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:{&quot;start&quot;:0,&quot;end&quot;:100}},&quot;motion_fx_devices&quot;:[&quot;desktop&quot;,&quot;laptop&quot;,&quot;tablet&quot;,&quot;mobile_extra&quot;,&quot;mobile&quot;]}" data-widget_type="heading.default">
+				<div class="elementor-widget-container elementor-motion-effects-element" style="--translateX: 177.4px; --e-transform-transition-duration: 100ms; transform: translateX(var(--translateX));">
+					<p class="elementor-heading-title elementor-size-default"><span class="deg">ENTRAR AGORA</span></p>				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-1022566 e-flex e-con-boxed e-con e-parent e-lazyloaded" data-id="1022566" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-3a8a6af elementor-widget elementor-widget-heading" data-id="3a8a6af" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default">Site feito com Carinho</p>				</div>
+				</div>
+				<div class="elementor-element elementor-element-db2ecde elementor-widget__width-initial elementor-widget elementor-widget-image" data-id="db2ecde" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="512" height="452" src="//socialprocrew.com/wp-content/webp-express/webp-images/uploads/2025/10/heart-1.png.webp" class="attachment-full size-full wp-image-7240 entered lazyloaded" alt="" data-lazy-srcset="//socialprocrew.com/wp-content/uploads/2025/10/heart-1.png 512w,   //socialprocrew.com/wp-content/uploads/2025/10/heart-1-300x265.png 300w" data-lazy-sizes="(max-width: 512px) 100vw, 512px" data-lazy-src="//socialprocrew.com/wp-content/webp-express/webp-images/uploads/2025/10/heart-1.png.webp" data-ll-status="loaded" sizes="(max-width: 512px) 100vw, 512px" srcset="//socialprocrew.com/wp-content/uploads/2025/10/heart-1.png 512w,   //socialprocrew.com/wp-content/uploads/2025/10/heart-1-300x265.png 300w">															</div>
+				</div>
+				<div class="elementor-element elementor-element-0e5fc7d elementor-widget elementor-widget-heading" data-id="0e5fc7d" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default">por</p>				</div>
+				</div>
+				<div class="elementor-element elementor-element-12ab4d8 elementor-widget elementor-widget-heading" data-id="12ab4d8" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default"><a href="https://www.instagram.com/zeph.rafa/">@zeph.rafa</a></p>				</div>
+				</div>
+					</div>
+				</div>
+				</div>
+		<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/hello-elementor/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+
+    <style>
+        /* .plyr__progress input[type=range]::-ms-scrollbar-track {
+            box-shadow: none !important;
+        }
+
+        .plyr__progress input[type=range]::-webkit-scrollbar-track {
+            box-shadow: none !important;
+        } */
+
+        .plyr {
+            input[type=range]::-webkit-slider-runnable-track {
+                box-shadow: none;
+            }
+
+            input[type=range]::-moz-range-track {
+                box-shadow: none;
+            }
+
+            input[type=range]::-ms-track {
+                box-shadow: none;
+            }
+        }
+    </style>
+			<script>
+				const lazyloadRunObserver = () => {
+					const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
+					const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+						entries.forEach( ( entry ) => {
+							if ( entry.isIntersecting ) {
+								let lazyloadBackground = entry.target;
+								if( lazyloadBackground ) {
+									lazyloadBackground.classList.add( 'e-lazyloaded' );
+								}
+								lazyloadBackgroundObserver.unobserve( entry.target );
+							}
+						});
+					}, { rootMargin: '200px 0px 200px 0px' } );
+					lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+						lazyloadBackgroundObserver.observe( lazyloadBackground );
+					} );
+				};
+				const events = [
+					'DOMContentLoaded',
+					'elementor/lazyload/observe',
+				];
+				events.forEach( ( event ) => {
+					document.addEventListener( event, lazyloadRunObserver );
+				} );
+			</script>
+			<script src="//socialprocrew.com/wp-includes/js/dist/hooks.min.js?ver=dd5603f07f9220ed27f1" id="wp-hooks-js"></script>
+<script src="//socialprocrew.com/wp-includes/js/dist/i18n.min.js?ver=c26c3dc7bed366793375" id="wp-i18n-js"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+</script>
+<script id="presto-components-js-extra">
+var prestoComponents = {"url":"https://socialprocrew.com/wp-content/plugins/presto-player/dist/components/web-components/web-components.esm.js?ver=1771896363"};
+var prestoPlayer = {"plugin_url":"https://socialprocrew.com/wp-content/plugins/presto-player/","logged_in":"","root":"https://socialprocrew.com/wp-json/","nonce":"a37167f525","ajaxurl":"https://socialprocrew.com/wp-admin/admin-ajax.php","isAdmin":"","isSetup":{"bunny":false},"proVersion":"","isPremium":"","wpVersionString":"wp/v2/","prestoVersionString":"presto-player/v1/","debug":"","debug_navigator":"","i18n":{"skip":"Skip","rewatch":"Rewatch","emailPlaceholder":"Email address","emailDefaultHeadline":"Enter your email to play this episode.","chapters":"Chapters","show_chapters":"Show Chapters","hide_chapters":"Hide Chapters","restart":"Restart","rewind":"Rewind {seektime}s","play":"Play","pause":"Pause","fastForward":"Forward {seektime}s","seek":"Seek","seekLabel":"{currentTime} of {duration}","played":"Played","buffered":"Buffered","currentTime":"Current time","duration":"Duration","volume":"Volume","mute":"Mute","unmute":"Unmute","enableCaptions":"Enable captions","disableCaptions":"Disable captions","download":"Download","enterFullscreen":"Enter fullscreen","exitFullscreen":"Exit fullscreen","frameTitle":"Player for {title}","captions":"Captions","settings":"Settings","pip":"PIP","menuBack":"Go back to previous menu","speed":"Speed","normal":"Normal","quality":"Quality","loop":"Loop","start":"Start","end":"End","all":"All","reset":"Reset","disabled":"Disabled","enabled":"Enabled","advertisement":"Ad","qualityBadge":{"2160":"4K","1440":"HD","1080":"HD","720":"HD","576":"SD","480":"SD"},"auto":"AUTO","upNext":"Up Next","startOver":"Start Over"}};
+var prestoComponents = {"url":"https://socialprocrew.com/wp-content/plugins/presto-player/dist/components/web-components/web-components.esm.js?ver=1771896363"};
+var prestoPlayer = {"plugin_url":"https://socialprocrew.com/wp-content/plugins/presto-player/","logged_in":"","root":"https://socialprocrew.com/wp-json/","nonce":"a37167f525","ajaxurl":"https://socialprocrew.com/wp-admin/admin-ajax.php","isAdmin":"","isSetup":{"bunny":false},"proVersion":"","isPremium":"","wpVersionString":"wp/v2/","prestoVersionString":"presto-player/v1/","debug":"","debug_navigator":"","i18n":{"skip":"Skip","rewatch":"Rewatch","emailPlaceholder":"Email address","emailDefaultHeadline":"Enter your email to play this episode.","chapters":"Chapters","show_chapters":"Show Chapters","hide_chapters":"Hide Chapters","restart":"Restart","rewind":"Rewind {seektime}s","play":"Play","pause":"Pause","fastForward":"Forward {seektime}s","seek":"Seek","seekLabel":"{currentTime} of {duration}","played":"Played","buffered":"Buffered","currentTime":"Current time","duration":"Duration","volume":"Volume","mute":"Mute","unmute":"Unmute","enableCaptions":"Enable captions","disableCaptions":"Disable captions","download":"Download","enterFullscreen":"Enter fullscreen","exitFullscreen":"Exit fullscreen","frameTitle":"Player for {title}","captions":"Captions","settings":"Settings","pip":"PIP","menuBack":"Go back to previous menu","speed":"Speed","normal":"Normal","quality":"Quality","loop":"Loop","start":"Start","end":"End","all":"All","reset":"Reset","disabled":"Disabled","enabled":"Enabled","advertisement":"Ad","qualityBadge":{"2160":"4K","1440":"HD","1080":"HD","720":"HD","576":"SD","480":"SD"},"auto":"AUTO","upNext":"Up Next","startOver":"Start Over"}};
+//# sourceURL=presto-components-js-extra
+</script>
+<script data-minify="1" src="//socialprocrew.com/wp-content/cache/min/1/wp-content/plugins/presto-player/src/player/player-static.js?ver=1773315996" type="module" defer=""></script><script id="rocket-browser-checker-js-after">
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+//# sourceURL=rocket-browser-checker-js-after
+</script>
+<script id="rocket-preload-links-js-extra">
+var RocketPreloadLinksConfig = {"excludeUris":"/(?:.+/)?feed(?:/(?:.+/?)?)?$|/(?:.+/)?embed/|/(index\\.php/)?(.*)wp\\-json(/.*|$)|/refer/|/go/|/recommend/|/recommends/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https://socialprocrew.com","onHoverDelay":"100","rateThrottle":"3"};
+//# sourceURL=rocket-preload-links-js-extra
+</script>
+<script id="rocket-preload-links-js-after">
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+
+//# sourceURL=rocket-preload-links-js-after
+</script>
+<script data-minify="1" src="//socialprocrew.com/wp-content/cache/min/1/wp-content/themes/hello-elementor/assets/js/hello-frontend.js?ver=1773315996" id="hello-theme-frontend-js" defer=""></script>
+<script src="//socialprocrew.com/wp-content/uploads/wpmss/wpmssab.min.js?ver=1683301218" id="wpmssab-js" defer=""></script>
+<script src="//socialprocrew.com/wp-content/plugins/mousewheel-smooth-scroll/js/SmoothScroll.min.js?ver=1.5.1" id="SmoothScroll-js" defer=""></script>
+<script src="//socialprocrew.com/wp-content/uploads/wpmss/wpmss.min.js?ver=1683301218" id="wpmss-js" defer=""></script>
+<script src="//socialprocrew.com/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=4.1.3" id="elementor-webpack-runtime-js" defer=""></script>
+<script src="//socialprocrew.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=4.1.3" id="elementor-frontend-modules-js" defer=""></script>
+<script src="//socialprocrew.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js" defer=""></script>
+<script id="elementor-frontend-js-before">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Compartilhar no Facebook","shareOnTwitter":"Compartilhar no Twitter","pinIt":"Fixar","download":"Baixar","downloadImage":"Baixar imagem","fullscreen":"Tela cheia","zoom":"Zoom","share":"Compartilhar","playVideo":"Reproduzir v\u00eddeo","previous":"Anterior","next":"Pr\u00f3ximo","close":"Fechar","a11yCarouselPrevSlideMessage":"Slide anterior","a11yCarouselNextSlideMessage":"Pr\u00f3ximo slide","a11yCarouselFirstSlideMessage":"Este \u00e9 o primeiro slide","a11yCarouselLastSlideMessage":"Este \u00e9 o \u00faltimo slide","a11yCarouselPaginationBulletMessage":"Ir para o slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Dispositivos m\u00f3veis no modo retrato","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Dispositivos m\u00f3veis no modo paisagem","value":880,"default_value":880,"direction":"max","is_enabled":true},"tablet":{"label":"Tablet no modo retrato","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet no modo paisagem","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Notebook","value":1366,"default_value":1366,"direction":"max","is_enabled":true},"widescreen":{"label":"Tela ampla (widescreen)","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":true},"version":"4.1.3","is_static":false,"experimentalFeatures":{"e_font_icon_svg":true,"additional_custom_breakpoints":true,"container":true,"theme_builder_v2":true,"hello-theme-header-footer":true,"nested-elements":true,"global_classes_should_enforce_capabilities":true,"e_variables":true,"e_opt_in_v4_page":true,"e_components":true,"e_interactions":true,"e_widget_creation":true,"import-export-customization":true,"mega-menu":true,"e_pro_variables":true},"urls":{"assets":"https:\/\/socialprocrew.com\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/socialprocrew.com\/wp-admin\/admin-ajax.php","uploadUrl":"https:\/\/socialprocrew.com\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"7042d55734","atomicFormsSendForm":"832257c69d"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_mobile_extra","viewport_tablet","viewport_laptop"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description","hello_header_logo_type":"logo","hello_header_menu_layout":"horizontal"},"post":{"id":6985,"title":"LP%20%E2%80%93%20Agente%20IA%20%E2%80%93%20Social%20Pro","excerpt":"","featuredImage":false}};
+//# sourceURL=elementor-frontend-js-before
+</script>
+<script src="//socialprocrew.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=4.1.3" id="elementor-frontend-js" defer=""></script>
+<script src="//socialprocrew.com/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js?ver=3.35.1" id="e-sticky-js" defer=""></script>
+<script src="//socialprocrew.com/wp-content/plugins/elementor/assets/lib/swiper/v8/swiper.min.js?ver=8.4.5" id="swiper-js" defer=""></script>
+<script src="//socialprocrew.com/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.35.1" id="elementor-pro-webpack-runtime-js" defer=""></script>
+<script id="elementor-pro-frontend-js-before">
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/socialprocrew.com\/wp-admin\/admin-ajax.php","nonce":"ee01caf792","urls":{"assets":"https:\/\/socialprocrew.com\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/socialprocrew.com\/wp-json\/"},"settings":{"lazy_load_background_images":true},"popup":{"hasPopUps":true},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"},"x-twitter":{"title":"X"},"threads":{"title":"Threads"}},"facebook_sdk":{"lang":"pt_BR","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/socialprocrew.com\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+//# sourceURL=elementor-pro-frontend-js-before
+</script>
+<script src="//socialprocrew.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.35.1" id="elementor-pro-frontend-js" defer=""></script>
+<script src="//socialprocrew.com/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.35.1" id="pro-elements-handlers-js" defer=""></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://socialprocrew.com/wp-includes/js/wp-emoji-release.min.js?ver=6.9.4"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://socialprocrew.com/wp-includes/js/wp-emoji-loader.min.js
+</script>
+<script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async="" src="//socialprocrew.com/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script><script>function lazyLoadThumb(e){var t='<img data-lazy-src="//i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"><noscript><img src="//i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"></noscript>',a='<button class="play" aria-label="play Youtube video"></button>';return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.parentNode.dataset.query.length?'':'&'+this.parentNode.dataset.query;e.setAttribute("src",t.replace("ID",this.parentNode.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.parentNode.replaceChild(e,this.parentNode)}document.addEventListener("DOMContentLoaded",function(){var e,t,p,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)e=document.createElement("div"),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query", a[t].dataset.query),e.setAttribute("data-src", a[t].dataset.src),e.innerHTML=lazyLoadThumb(a[t].dataset.id),a[t].appendChild(e),p=e.querySelector('.play'),p.onclick=lazyLoadYoutubeIframe});</script>	
+
+<span id="elementor-device-mode" class="elementor-screen-only"></span><svg style="display: none;" class="e-font-icon-svg-symbols"></svg></body></html><!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1781905482 -->
